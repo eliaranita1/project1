@@ -1,4 +1,5 @@
-# Project Proposal
+# Project Proposal 
+this doesnt have to be the readme we can always just copy and paste this into another file
 
 **Introduction**: Come up with a group name, and write a short description about what your group is for/about. 
 
