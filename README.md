@@ -7,7 +7,7 @@
 Meet the Team!
 
 Hi, I'm Julia Wood and I will be the data visualization specialist for our team. Besides data visualization, I will also conduct data analysis and help put our website together. 
-![me](link)
+![me](https://github.com/eliaranita1/project1/blob/main/kelseyselfiesmall_img.jpg)
 
 **Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
 
