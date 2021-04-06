@@ -7,7 +7,7 @@
 Meet the Team!
 
 <img align="left" width="100" height="100" src="https://github.com/eliaranita1/project1/blob/main/kelseyselfiesmall_img.jpg">
-Hi, I'm Julia Wood and I will be the data visualization specialist for our team. Besides data visualization, I will also conduct data analysis and help put our website together. 
+Hi, I'm Julia Wood and I will be the data visualization specialist for our team. Besides data visualization, I will also conduct data analysis and help put our website together. /n/n
 
 
 
