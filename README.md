@@ -15,7 +15,7 @@ I'm Eli and I will be the web specialist for our team. I will be managing the fu
 <br/><br/><br/>
 
 <img align="left" width="100" height="100" src="IMG_2368.jpg">
-Hello! I'm Derek and I will be the mapping specialist and UX designer for our team. (putting in more later)
+Hello! I'm Derek and I will be the UX designer for our team. In addition, I plan to help construct of a compelling narrative and plan to implement Python interactive mapping knowledge into our project from DH140.
 <br/><br/>
 
 **Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
