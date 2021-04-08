@@ -16,6 +16,7 @@ I'm Eli and I will be the web specialist for our team. I will be managing the fu
 
 <img align="left" width="100" height="100" src="IMG_2368.jpg">
 Hello! I'm Derek and I will be the mapping specialist and UX designer for our team. (putting in more later)
+<br/><br/>
 
 **Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
 
