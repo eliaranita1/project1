@@ -8,7 +8,7 @@ this proposal doesnt have to be the readme we can always just copy and paste thi
 ## Meet the Team!
 
 <img align="left" width="100" height="100" src="https://github.com/eliaranita1/project1/blob/main/kelseyselfiesmall_img.jpg">
-Hi, I'm Julia Wood and I will be the data visualization specialist for our team. Besides data visualization, I will also conduct data analysis and help put our website together. I am really looking forward to working on this project because I am passionate about protecting our oceans, reversing climate change, and uncovering spatial trends using web mapping! <br/><br/>
+Hi, I'm Julia Wood and I will be the data visualization specialist for our team. Besides data visualization, I will also conduct data analysis and help put our website together. I am really looking forward to working on this project because I am passionate about protecting our oceans, reversing climate change, and uncovering spatial trends using web mapping! <br/><br/><br/>
 
 <img align="left" width="100" height="100" src="me2.jpg">
 I'm Eli and I will be the web specialist for our team. I will be managing the functionality of our site, writing and reviewing code, and helping out the team with other aspects of the project as needed.
