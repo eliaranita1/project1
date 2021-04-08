@@ -14,6 +14,8 @@ Hi, I'm Julia Wood and I will be the data visualization specialist for our team.
 I'm Eli and I will be the web specialist for our team. I will be managing the functionality of our site, writing and reviewing code, and helping out the team with other aspects of the project as needed.
 <br/><br/><br/><br/>
 
+<img align="left" width="100" height="100" src="IMG_2368.jpg">
+
 **Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
 
 Our team aims to investigate ... "fishings impact on the climate, plastic in the ocean"
