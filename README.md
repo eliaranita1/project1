@@ -1,6 +1,6 @@
 # Project Proposal 
 
-[Dumped Fishing Gear](https://github.com/eliaranita1/project1/blob/main/dumpedfishinggear.png)
+![Dumped Fishing Gear](https://github.com/eliaranita1/project1/blob/main/dumpedfishinggear.png)
 
 ## Hi, We're the Ocean Pollution Posse. 
 
