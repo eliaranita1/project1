@@ -34,4 +34,6 @@ Our team aims to investigate ... "fishings impact on the climate, plastic in the
 
 **Technical scope**: Introduce the technologies that project will use (Git, Leaflet, HTML, Javascript, etc) and what role each one will play (a diagram might be helpful)
 
+We will use the following technologies in our project: Git, HTML
+
 **Data**: Introduce at least two datasets that will be included in the project (include links as necessary). Make sure the data is "mappable" either by manual data entry, through an API, or by downloading it.
