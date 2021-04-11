@@ -25,6 +25,7 @@ Our team aims to investigate ... "fishings impact on the climate, plastic in the
 **Methodology**: Introduce web mapping as a methodology of inquiry, and explain why this medium was chosen.
 
 **Workflow**: Provide a workflow diagram/table that outlines the steps/phases the project will take from start to completion. Include dates/weeks as milestones.
+![timeline](https://github.com/eliaranita1/project1/blob/main/timeline.png)
 
 | Timeline  | Goals |
 | ------------- | ------------- |
