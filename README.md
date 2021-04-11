@@ -11,7 +11,7 @@ Hi, I'm Julia Wood and I will be the data visualization specialist for our team.
 
 <img align="left" width="100" height="100" src="me2.jpg">
 I'm Eli and I will be the web specialist for our team. I will be managing the functionality of our site, writing and reviewing code, and helping out the team with other aspects of the project as needed.
-<br/><br/>
+<br/>
 
 <img align="left" width="100" height="100" src="IMG_2368.jpg">
 Hello! I'm Derek and I will be the UX designer for our team. In addition to designing the site, I plan to help construct of a compelling narrative and plan to implement Python interactive mapping knowledge from DH140. I hope to discover exciting, new findings with the team!
