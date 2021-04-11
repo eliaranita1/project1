@@ -1,5 +1,7 @@
 # Project Proposal 
 
+[Dumped Fishing Gear](https://github.com/eliaranita1/project1/blob/main/dumpedfishinggear.png)
+
 ## Hi, We're the Ocean Pollution Posse. 
 
 Our mission this quarter is to analyze plastic pollutants in the ocean. According to George Leonard, the chief scientist at the Ocean Conservancy, *“At least half of [...ocean plastic waste] is not consumer plastics, which are central to much of the current debate, but fishing gear.”* This fact surprised our team and inspired us to look deeper into the connection between the fishing industry and plastic in the ocean.
