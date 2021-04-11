@@ -46,6 +46,15 @@ We will use the following technologies in our project.
 | Git  | Git will be used to work collaboratively on our project this quarter.  |
 
 
-**Data**: Introduce at least two datasets that will be included in the project (include links as necessary). Make sure the data is "mappable" either by manual data entry, through an API, or by downloading it.
+## The Data
+
+Introduce at least two datasets that will be included in the project (include links as necessary). Make sure the data is "mappable" either by manual data entry, through an API, or by downloading it.
+
+1. Plastic Data Set: Estimate of Plastic Pollution in the World's Ocean [link](https://arc-gis-hub-home-arcgishub.hub.arcgis.com/datasets/schools-BE::estimate-of-plastic-pollution-in-the-world-s-oceans-1-01-4-75?geometry=-118.091%2C-54.081%2C-157.467%2C50.378) 
+    1. Years: 2007-2013
+3. Fishing Data Set: Global Datasets of AIS-based Fishing Effort and Vessel Presence [link](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
+    1. Years: 2012-2020
+    2. Note: The fishing data set comes from Global Fishing Watch, and you have to make an account to access the data. 
+    3. Description: This dataset contains the Global Fishing Watch AIS-based fishing effort and vessel presence datasets. Data is based on fishing detections of >114,000 unique AIS devices on fishing vessels, of which ~70,000 are active each year. Fishing vessels are identified via a neural network classifier, vessel registry databases, and manual review by GFW and regional experts. Data are binned into grid cells 0.01 (or 0.1) degrees on a side and measured in units of hours. The time is calculated by assigning an amount of time to each AIS detection (which is the time to the previous position), and then summing all positions in each grid cell. 
 
 
