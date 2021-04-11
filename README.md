@@ -1,9 +1,8 @@
 # Project Proposal 
-this proposal doesnt have to be the readme we can always just copy and paste this into another file
 
-**Introduction**: Come up with a group name, and write a short description about what your group is for/about. 
+## Hi, We're the Ocean Pollution Posse. 
 
-**Team members**: Introduce each member of the team (include a photo/avatar), their titles, roles, and a short blurb.
+Our mission this quarter is to analyze plastic pollutants in the ocean. According to George Leonard, the chief scientist at the Ocean Conservancy, *“At least half of [...ocean plastic waste] is not consumer plastics, which are central to much of the current debate, but fishing gear.”* This fact surprised our team and inspired us to look deeper into the connection between the fishing industry and plastic in the ocean.
 
 ## Meet the Team!
 
@@ -19,6 +18,8 @@ Hello! I'm Derek and I will be the UX designer for our team. In addition to desi
 <br/><br/><br/>
 
 **Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
+
+As we know, the human species has drastically changed the world 
 
 Our team aims to investigate ... "fishings impact on the climate, plastic in the ocean"
 
