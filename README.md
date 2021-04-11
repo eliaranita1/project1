@@ -17,7 +17,11 @@ I'm Eli and I will be the web specialist for our team. I will be managing the fu
 Hello! I'm Derek and I will be the UX designer for our team. In addition to designing the site, I plan to help construct of a compelling narrative and plan to implement Python interactive mapping knowledge from DH140. I hope to discover exciting, new findings with the team!
 <br/><br/><br/>
 
-**Overview**: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
+## Project Overview
+
+Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
+
+
 
 As we know, the human species has drastically changed the world 
 
@@ -28,13 +32,19 @@ Our team aims to investigate ... "fishings impact on the climate, plastic in the
 **Workflow**: Provide a workflow diagram/table that outlines the steps/phases the project will take from start to completion. Include dates/weeks as milestones.
 ![timeline](https://github.com/eliaranita1/project1/blob/main/timeline.png)
 
-| Timeline  | Goals |
-| ------------- | ------------- |
-| Week 2  | Project Proposal  |
-| Content Cell  | Content Cell  |
-
 **Technical scope**: Introduce the technologies that project will use (Git, Leaflet, HTML, Javascript, etc) and what role each one will play (a diagram might be helpful)
 
 We will use the following technologies in our project: Git, HTML
 
+| Technology  | Purpose |
+| ------------- | ------------- |
+| Python/R | Python and R will be the programming languages used to conduct statistical analyses of our data.  |
+| Tableau  | Tableau is a data visualization software, that will help us create our web maps.  |
+| HTML/CSS | HTML and CSS will be the backbone of our website.  |
+| Javascript | Javascript will animate our web maps allowing people to interact with them.  |
+| Git  | Git will be used to work collaboratively on our project this quarter.  |
+
+
 **Data**: Introduce at least two datasets that will be included in the project (include links as necessary). Make sure the data is "mappable" either by manual data entry, through an API, or by downloading it.
+
+
