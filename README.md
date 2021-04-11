@@ -48,8 +48,6 @@ We will use the following technologies in our project.
 
 ## The Data
 
-Introduce at least two datasets that will be included in the project (include links as necessary). Make sure the data is "mappable" either by manual data entry, through an API, or by downloading it.
-
 1. Plastic Data Set: Estimate of Plastic Pollution in the World's Ocean [link](https://arc-gis-hub-home-arcgishub.hub.arcgis.com/datasets/schools-BE::estimate-of-plastic-pollution-in-the-world-s-oceans-1-01-4-75?geometry=-118.091%2C-54.081%2C-157.467%2C50.378) 
     1. Years: 2007-2013
 3. Fishing Data Set: Global Datasets of AIS-based Fishing Effort and Vessel Presence [link](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
