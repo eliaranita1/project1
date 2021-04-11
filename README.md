@@ -23,7 +23,7 @@ Direction: Introduce the group project by stating what it is that you are invest
 
 In recent years, individuals have been switching out their water bottles and plastic bags for resuable alternatives. More and more people are aware of their personal impact on the environment and actively work to minimize their carbon footprint. 
 
-However, what many people do not know is that the fishing industry is the biggest contributor of large plastics in the ocean, with fishing gear making up about "70 percent of plastics more than 20 centimeters (approximately 8 inches) large floating on the ocean's surface" (EcoWatch.com).
+However, what many people do not know is that the fishing industry is the biggest contributor of large plastics in the ocean, with fishing gear making up about "70 percent of plastics more than 20 centimeters (approximately 8 inches) large floating on the ocean's surface" (Greenpeace).
 
 Our team aims to investigate international fishing patterns and fishing activity translates to plastic pollution in our oceans. 
 
