@@ -27,14 +27,15 @@ As we know, the human species has drastically changed the world
 
 Our team aims to investigate ... "fishings impact on the climate, plastic in the ocean"
 
-**Methodology**: Introduce web mapping as a methodology of inquiry, and explain why this medium was chosen.
+## Methodology
 
-**Workflow**: Provide a workflow diagram/table that outlines the steps/phases the project will take from start to completion. Include dates/weeks as milestones.
+Introduce web mapping as a methodology of inquiry, and explain why this medium was chosen.
+
+## Timeline
 ![timeline](https://github.com/eliaranita1/project1/blob/main/timeline.png)
 
-**Technical scope**: Introduce the technologies that project will use (Git, Leaflet, HTML, Javascript, etc) and what role each one will play (a diagram might be helpful)
-
-We will use the following technologies in our project: Git, HTML
+## Technical scope
+We will use the following technologies in our project.
 
 | Technology  | Purpose |
 | ------------- | ------------- |
