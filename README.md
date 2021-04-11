@@ -19,8 +19,6 @@ Hello! I'm Derek and I will be the UX designer for our team. In addition to desi
 
 ## Project Overview
 
-Direction: Introduce the group project by stating what it is that you are investigating, and why this is a matter of importance.
-
 In recent years, individuals have been switching out their water bottles and plastic bags for resuable alternatives. More and more people are aware of their personal impact on the environment and actively work to minimize their carbon footprint. 
 
 However, what many people do not know is that the fishing industry is the biggest contributor of large plastics in the ocean, with fishing gear making up about "70 percent of plastics more than 20 centimeters (approximately 8 inches) large floating on the ocean's surface" (Greenpeace).
@@ -28,8 +26,6 @@ However, what many people do not know is that the fishing industry is the bigges
 Our team aims to investigate international fishing patterns and fishing activity translates to plastic pollution in our oceans. 
 
 ## Methodology
-
-Direction: Introduce web mapping as a methodology of inquiry, and explain why this medium was chosen. 
 
 We will present our data and findings through interactive web maps. We chose this medium because web maps can easily display information with a location component to it.
 
