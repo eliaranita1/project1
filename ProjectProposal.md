@@ -25,7 +25,7 @@ In recent years, individuals have been switching out their water bottles and pla
 
 However, what many people do not know is that the fishing industry is the biggest contributor of large plastics in the ocean, with fishing gear making up about "70 percent of plastics more than 20 centimeters (approximately 8 inches) large floating on the ocean's surface" (Greenpeace).
 
-Our team aims to investigate international fishing patterns and fishing activity translates to plastic pollution in our oceans. 
+Our team aims to investigate international fishing patterns and how fishing activity translates to plastic pollution in our oceans. 
 
 ## Methodology
 
