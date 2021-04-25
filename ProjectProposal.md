@@ -25,7 +25,7 @@ In recent years, individuals have been switching out their water bottles and pla
 
 However, what many people do not know is that the fishing industry is the biggest contributor of large plastics in the ocean, with fishing gear making up about "70 percent of plastics more than 20 centimeters (approximately 8 inches) large floating on the ocean's surface" (Greenpeace).
 
-Our team aims to investigate international fishing patterns and fishing activity translates to plastic pollution in our oceans. 
+Our team aims to investigate international fishing patterns and how fishing activity translates to plastic pollution in our oceans. 
 
 ## Methodology
 
@@ -50,7 +50,7 @@ We will use the following technologies in our project.
 
 1. Plastic Data Set: Estimate of Plastic Pollution in the World's Ocean [link](https://arc-gis-hub-home-arcgishub.hub.arcgis.com/datasets/schools-BE::estimate-of-plastic-pollution-in-the-world-s-oceans-1-01-4-75?geometry=-118.091%2C-54.081%2C-157.467%2C50.378) 
     1. Years: 2007-2013
-3. Fishing Data Set: Global Datasets of AIS-based Fishing Effort and Vessel Presence [link](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
+2. Fishing Data Set: Global Datasets of AIS-based Fishing Effort and Vessel Presence [link](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort) 
     1. Years: 2012-2020
     2. Note: The fishing data set comes from Global Fishing Watch, and you have to make an account to access the data. 
     3. Description: This dataset contains the Global Fishing Watch AIS-based fishing effort and vessel presence datasets. Data is based on fishing detections of >114,000 unique AIS devices on fishing vessels, of which ~70,000 are active each year. Fishing vessels are identified via a neural network classifier, vessel registry databases, and manual review by GFW and regional experts. Data are binned into grid cells 0.01 (or 0.1) degrees on a side and measured in units of hours. The time is calculated by assigning an amount of time to each AIS detection (which is the time to the previous position), and then summing all positions in each grid cell. 
