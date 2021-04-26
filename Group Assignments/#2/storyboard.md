@@ -21,7 +21,7 @@ Derek's:
   <img src="/Group%20Assignments/%232/derek2.jpg" width="1000" /> 
 </p>
 
-Reactions: Here, I just thought about the homepage layout and what other pages we could consider. 
+Reactions: Here, I just thought about the homepage layout and what other pages we could consider. I also wondered about what sort of language/tone we should use to cater to our audience in regards to our narrative (e.g. skeptics vs high school student).
 
 ### Crazy Eights
 
