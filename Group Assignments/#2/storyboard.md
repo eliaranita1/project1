@@ -10,7 +10,7 @@ Julia's:
   <img src="/Group%20Assignments/%232/julia2.png" width="1000" /> 
 </p>
 
-Reactions:
+Reactions: I really enjoyed making a mind map; it helped me layout a lot of different ideas I had about our website all on one piece of paper. It also encouraged a lot of discussion between my teammates and I about what ideas we like best, and what we know we can accomplish this quarter.
 
 Eli's:
 
@@ -34,7 +34,7 @@ Julia's:
 <img src="/Group%20Assignments/%232/julia1.png" width="1000" /> </br>
 </p>
 
-Reactions: 
+Reactions: This exercise was a lot more challenging for me than the first one. Wireframing can be a bit difficult for me, so I went for smaller scale features like a filtering box with not only labels, but icons as well. Then detailing what kind of pages we wanted on our site. It was interesting because Derek and I both designed a page for the same purpose, but I liked his idea way way way better, so we can going to incorporate that one. Just wish we had more time. 
 
 Eli's:
 
