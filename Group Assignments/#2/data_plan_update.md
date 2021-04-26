@@ -6,7 +6,7 @@ We have decided to narrow down our data down to these datasets:
 * Link 1 
 * Link 2
 * Mismanaged Plastic Waste: https://ourworldindata.org/plastic-pollution </br>
-We will use this dataset to illustrate which countries are not managing their plastic waste properly, which allows plastic waste to enter the ocean via inland waterways, wastewater outflows, or by wind/tides.
+We will use this dataset to illustrate which countries are not managing their plastic waste properly, which allows plastic waste to enter the ocean via inland waterways, wastewater outflows, or by wind/tides. We will also use this data to construct bar charts to show which countries are the greatest contributors.
 
 We will use our data to -(ex. "Data will be downloaded as a csv file from link and geocoded using Pytho
 
