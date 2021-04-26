@@ -28,3 +28,7 @@ Reactions: I couldn't finish my Crazy 8's in time so I ended up taking a bit mor
 
 ### Wireframes
 
+<p>
+  <img src="/Group%20Assignments/%232/wireframes.png" width="1000" />
+</p>
+
