@@ -7,14 +7,14 @@
 Julia's:
 
 <p>
-  <img src="/Group%20Assignments/%232/julia1.png" width="400" /> </br>
-  <img src="/Group%20Assignments/%232/julia2.png" width="400" /> 
+  <img src="/Group%20Assignments/%232/julia1.png" width="1000" /> </br>
+  <img src="/Group%20Assignments/%232/julia2.png" width="1000" /> 
 </p>
 
 Eli's:
 
 Derek's: 
 <p>
-  <img src="/Group%20Assignments/%232/derek1.jpg" width="800" /> </br>
-  <img src="/Group%20Assignments/%232/derek2.jpg" width="800" /> 
+  <img src="/Group%20Assignments/%232/derek1.jpg" width="1000" /> </br>
+  <img src="/Group%20Assignments/%232/derek2.jpg" width="1000" /> 
 </p>
