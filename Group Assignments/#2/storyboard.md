@@ -28,6 +28,7 @@ Reactions: I couldn't finish my Crazy 8's in time so I ended up taking a bit mor
 
 ### Wireframes
 
+We chose to do our wireframes on Moqups. Click [here]https://app.moqups.com/iFJRtMTHVW/view/page/a9de4d023 to 
 <p>
   <img src="/Group%20Assignments/%232/wireframes.png" width="1000" />
 </p>
