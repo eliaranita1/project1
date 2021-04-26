@@ -21,6 +21,8 @@ Derek's:
   <img src="/Group%20Assignments/%232/derek2.jpg" width="1000" /> 
 </p>
 
+Reactions:
+
 ### Crazy Eights
 
 Julia's: 
@@ -28,7 +30,11 @@ Julia's:
 <img src="/Group%20Assignments/%232/julia1.png" width="1000" /> </br>
 </p>
 
+Reactions:
+
 Eli's:
+
+Reactions: 
 
 Derek's:
 <p>
