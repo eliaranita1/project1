@@ -7,7 +7,7 @@
 Julia's:
 
 <p align ="middle">
-  <img src="/#2/julia1.png" width="400" />
+  <img src="/Group Assignments/#2/julia1.png" width="400" />
   <img src="/#2/julia2.png" width="400" /> 
 </p>
 
