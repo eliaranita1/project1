@@ -26,7 +26,7 @@ Derek's:
 Reactions: I couldn't finish my Crazy 8's in time so I ended up taking a bit more time to fill it out! I don't think we're going to use all of the ideas we thought of today, but at least we have some place to start.
 
 
-### Wireframes
+### Storyboard Collection With Wireframes
 
 We chose to do our wireframes on Moqups and have left a brief overview below. Click [here](https://app.moqups.com/iFJRtMTHVW/view/page/a9de4d023) if you would like a closer look. 
 <p>
