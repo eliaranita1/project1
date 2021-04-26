@@ -2,7 +2,7 @@
 
 ## Part 1: Data Plan Update
 
-We have decided to narrow down our data down to these datasets:
+We have decided to use these datasets: 
 * [Estimate of Plastic Pollution in the World's Oceans](https://arc-gis-hub-home-arcgishub.hub.arcgis.com/datasets/schools-BE::estimate-of-plastic-pollution-in-the-world-s-oceans-1-01-4-75?geometry=-118.091%2C-54.081%2C-157.467%2C50.378)
 * [Global Datsets of AIS-based Fishing Effort and Vessel Presence](https://globalfishingwatch.org/data-download/datasets/public-fishing-effort)
 * [Mismanaged Plastic Waste](https://ourworldindata.org/plastic-pollution) </br>
