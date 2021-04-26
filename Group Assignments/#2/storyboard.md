@@ -21,7 +21,7 @@ Derek's:
   <img src="/Group%20Assignments/%232/derek2.jpg" width="1000" /> 
 </p>
 
-Reactions:
+Reactions: Here, I just thought about the homepage layout and what other pages we could consider. 
 
 ### Crazy Eights
 
@@ -30,7 +30,7 @@ Julia's:
 <img src="/Group%20Assignments/%232/julia1.png" width="1000" /> </br>
 </p>
 
-Reactions:
+Reactions: 
 
 Eli's:
 
