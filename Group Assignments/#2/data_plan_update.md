@@ -3,7 +3,7 @@
 ## Part 1: Data Plan Update
 
 We have decided to narrow down our data down to these datasets:
-* Link 1 
+* [Estimate of Plastic Pollution in the World's Oceans](https://arc-gis-hub-home-arcgishub.hub.arcgis.com/datasets/schools-BE::estimate-of-plastic-pollution-in-the-world-s-oceans-1-01-4-75?geometry=-118.091%2C-54.081%2C-157.467%2C50.378)
 * Link 2
 * [Mismanaged Plastic Waste](https://ourworldindata.org/plastic-pollution) </br>
 We will use this dataset to illustrate which countries are not managing their plastic waste properly, which allows plastic waste to enter the ocean via inland waterways, wastewater outflows, or by wind/tides. We will also use this data to construct bar charts to show which countries are the greatest contributors.
