@@ -38,6 +38,11 @@ Reactions:
 
 Eli's:
 
+<p>
+  <img src="/Group%20Assignments/%232/IMG-3729.jpg" width="1000" /> 
+</p>
+
+
 Reactions: 
 
 Derek's:
