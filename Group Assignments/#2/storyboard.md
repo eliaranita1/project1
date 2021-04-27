@@ -18,7 +18,7 @@ Eli's:
   <img src="/Group%20Assignments/%232/IMG-3728.jpg" width="1000" /> 
 </p>
 
-Reactions:
+Reactions: I wanted to make a tree that showed the navigation throughout the site to get an idea of how to begin the code skeleton.
 
 Derek's: 
 <p>
@@ -43,7 +43,7 @@ Eli's:
 </p>
 
 
-Reactions: 
+Reactions: For this one I had a hard time coming up with ideas in a short amount of time. I tried to just put down basic layout ideas that matched up with my mind map.
 
 Derek's:
 <p>
