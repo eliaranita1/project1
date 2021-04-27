@@ -7,14 +7,14 @@ body, html {
 #quiz {
     margin: auto;
     padding-bottom: 10%;
-    background-color:lightblue;
+    background-color: lightblue;
     width: 40%;
-border: 4px solid black;
-border-radius: 20px;
-font-size: xx-large;
-font-weight: bold;
-font-family: 'Sawarabi Mincho', sans-serif;
-text-align: center;
+    border: 4px solid black;
+    border-radius: 20px;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Sawarabi Mincho', sans-serif;
+    text-align: center;
 }
 
 body {
@@ -24,7 +24,7 @@ body {
 }
 
 .button {
-    border:2px solid black;
+    border: 2px solid black;
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -33,21 +33,19 @@ body {
     font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
-  }
+}
 
-  .button:hover {
+.button:hover {
     background-color: #4CAF50;
     color: white;
-  }
+}
 
 .header {
     grid-area: header;
     text-align: center;
     padding: 10px;
     background-color: darkseagreen;
-
 }
-
 
 .content {
     grid-area: content;
@@ -55,15 +53,14 @@ body {
     background-size: cover;
 }
 
-
 a {
     font-size: 35px;
-color: black;
-padding: 0px 10px;
-  word-wrap: normal;
-  display: inline-block;
+    color: black;
+    padding: 0px 10px;
+    word-wrap: normal;
+    display: inline-block;
 }
 
-#nav:hover{
+#nav:hover {
     color: cornflowerblue;
 }
