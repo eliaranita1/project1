@@ -19,7 +19,7 @@ body, html {
     font-weight: bold;
     text-align: center;
     padding: 14px 16px;
-    text-decoration: none;
+    text-decoration:none;
   }
   
   /* The dropdown container */
@@ -78,9 +78,9 @@ body, html {
 
 body {
     display: grid;
-    grid-template-rows: 80px 1fr 20px;
+    grid-template-rows: 80px 1fr;
     grid-template-columns: 30% 70%;
-    grid-template-areas: "header header" "sidebar content" "footer footer";
+    grid-template-areas: "header header" "sidebar content";
 }
 
 .header {
@@ -91,11 +91,13 @@ body {
 }
 
 .sidebar {
-    color: white;
+    color: black;
     grid-area: sidebar;
     padding: 10px;
-    background-color: #555;
+    background-color:lightblue;
     overflow: auto;
+    font-family: sans-serif;
+    text-align : center;
 }
 
 .content {
@@ -114,4 +116,24 @@ color:cornflowerblue;
 padding: 0px 10px;
   word-wrap: normal;
   display: inline-block;
+}
+
+.button {
+    border: 2px solid black;
+    color: white;
+    background-color: darkslategray;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.button:hover {
+    background-color: #4CAF50;
+    color: white;
 }
