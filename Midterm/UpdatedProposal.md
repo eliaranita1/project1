@@ -57,3 +57,15 @@ We will use the following technologies in our project.
 3. Ocean Protected Zone Data Set [link](https://www.protectedplanet.net/en/search-areas?filters%5Bdb_type%5D%5B%5D=wdpa&filters%5Bis_type%5D%5B%5D=marine)
 4. Mismanaged Plastic Waste [link](https://ourworldindata.org/plastic-pollution) </br>
 We will use this supplemental dataset to illustrate which countries are not managing their plastic waste properly, which allows plastic waste to enter the ocean via inland waterways, wastewater outflows, or by wind/tides. We will also use this data to construct bar charts to show which countries are the greatest contributors.
+
+
+## UX Design Plan
+
+### Storyboard Collection With Wireframes
+
+We chose to do our wireframes on Moqups and have left a brief overview below. Click [here](https://app.moqups.com/iFJRtMTHVW/view/page/a9de4d023) if you would like a closer look. 
+<p>
+  <img src="/Group%20Assignments/%232/wireframes.png" width="1000" />
+</p>
+
+
