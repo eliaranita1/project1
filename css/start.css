@@ -49,7 +49,7 @@ body {
 
 .content {
     grid-area: content;
-    background-image: url('../trash.jpg');
+    background-image: url('../photos/trash.jpg');
     background-size: cover;
 }
 
