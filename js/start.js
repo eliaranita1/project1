@@ -1,7 +1,7 @@
 
 
 function goHome(input) {
-    window.location.href = 'project1/pages/home.html';
+    window.location.href = '../pages/home.html';
 
     switch (input) {
         case w:
