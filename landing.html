@@ -15,26 +15,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+        <script src="js/start.js"></script>
+
 </head>
 
 <body>
 
-    <div class="header">
-        <a id='nav' href='pages/home.html'> home </a> <a id='nav' href='pages/micro.html'> page 2 </a>
-        <a id='nav' href='pages/page3.html'> page 3 </a>
-    </div>
     <div class="content">
 
         <div id="quiz">
             What is the greatest contributor to plastic pollutants in the ocean? <br><br><br>
-            <button class="button" type="button">Industrial Waste</button> <br>
-            <button class="button" type="button">Consumer Plastics</button> <br>
-            <button class="button" type="button">Fishing Gear</button> <br>
-            <button class="button" type="button">Restaurant Takeout</button>
+            <button class="button" onclick = "goHome('w')" type="button">Industrial Waste</button> <br>
+            <button class="button" onclick = "goHome('p')" type="button">Consumer Plastics</button> <br>
+            <button class="button" onclick = "goHome('f')" type="button">Fishing Gear</button> <br>
+            <button class="button" onclick = "goHome('t')" type="button">Restaurant Takeout</button>
         </div>
     </div>
-
-    <script src="js/start.js"></script>
 
 </body>
 

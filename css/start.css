@@ -2,6 +2,7 @@ body, html {
     margin: 0;
     height: 100%;
     width: 100%;
+    background-color: black;
 }
 
 #quiz {
@@ -15,12 +16,6 @@ body, html {
     font-weight: bold;
     font-family: 'Sawarabi Mincho', sans-serif;
     text-align: center;
-}
-
-body {
-    display: grid;
-    grid-template-rows: 80px 1fr;
-    grid-template-areas: "header" "content";
 }
 
 .button {
@@ -38,13 +33,6 @@ body {
 .button:hover {
     background-color: #4CAF50;
     color: white;
-}
-
-.header {
-    grid-area: header;
-    text-align: center;
-    padding: 10px;
-    background-color: darkseagreen;
 }
 
 .content {
