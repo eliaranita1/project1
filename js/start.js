@@ -30,12 +30,12 @@ btn4.onclick = function () {
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
-    window.location.href = '../pages/home.html';
+    window.location.href = '../project1/pages/home.html';
 }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
-        window.location.href = '../pages/home.html';
+        window.location.href = '../project1/pages/home.html';
     }
 }
