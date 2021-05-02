@@ -7,8 +7,8 @@ body, html {
 
 body {
     display: grid;
-    grid-template-rows: 80px 1fr;
-    grid-template-areas: "header" "content";
+    grid-template-rows: 80px 100px 1fr 250px ;
+    grid-template-areas: "header" "title" "content" "text";
     background-color: aliceblue;
 }
 
@@ -23,6 +23,7 @@ body {
     margin: auto;
     height: 100%;
     background-color: aliceblue;
+    border: 3px solid black;
 }
 
 .content {

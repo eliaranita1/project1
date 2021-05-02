@@ -2,9 +2,14 @@
 let map;
 let lat = 0;
 let lon = 0;
-let zl = 3;
-let path = "#";
-let markers = L.featureGroup();
+let zl = 2;
+let path = "../Data/important-vessels.csv";
+let redmarkers = L.featureGroup();
+let orangemarkers = L.featureGroup();
+let bluemarkers = L.featureGroup();
+let yellowmarkers = L.featureGroup();
+let greenmarkers = L.featureGroup();
+let violetmarkers = L.featureGroup();
 
 
 // initialize
@@ -15,7 +20,10 @@ $(document).ready(function () {
 
 // create the map
 function createMap(lat, lon, zl) {
-    map = L.map('map').setView([lat, lon], zl);
+    map = L.map('map', {
+        preferCanvas: true,
+        zoomDelta: .5
+    }).setView([lat, lon], zl);
 
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -29,8 +37,7 @@ function readCSV(path) {
         Worker: true,
         download: true,
         complete: function (data) {
-            console.log(data);
-
+           // console.log(data);
             // map the data
             mapCSV(data);
         }
@@ -38,44 +45,52 @@ function readCSV(path) {
 }
 
 function mapCSV(data) {
-
-    // circle options
-    let circleOptions = {
-        radius: 5,
-        weight: 1,
-        color: 'white',
-        fillColor: 'dodgerblue',
-        fillOpacity: 1
-    }
-
-
     // loop through each entry
     data.data.forEach(function (item, index) {
+        // sort colors
+        switch (item.col) {
 
-        var popup = L.responsivePopup().setContent(`${item.Title}<br><img src="${item.imageurl}" onmouseover="panToImage(${index})" style = "max-width: 100%"
-    style = "height: auto">`);
-        // create marker
-        let marker = L.circleMarker([item.latitude, item.longitude], circleOptions)
-            .on('mouseover', function () {
-                this.bindPopup(popup).openPopup()
-            })
-        // add marker to featuregroup		
-        markers.addLayer(marker)
+            case 'red':
+                // create marker
+                let r = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                // add marker to featuregroup
+                redmarkers.addLayer(r);
+                break;
 
-        $('.sidebar').append(`${item.Title}<br><img src="${item.imageurl}" onmouseover="panToImage(${index})" style = "max-width: 100%"
-            style = "height: auto">`)
+            case 'blue':
+                let b = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                bluemarkers.addLayer(b);
+                break;
+
+            case 'green':
+                let g = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                greenmarkers.addLayer(g);
+                break;
+
+            case 'yellow':
+                let y = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                yellowmarkers.addLayer(y);
+                break;
+
+            case 'violet':
+                let v = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                violetmarkers.addLayer(v);
+                break;
+
+            case 'orange':
+                let o = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
+                orangemarkers.addLayer(o);
+                break;
+            default:
+                console.log("didnt work");
+        }
     })
 
     // add featuregroup to map
-    markers.addTo(map)
-
-    // fit markers to map
-    map.fitBounds(markers.getBounds())
-}
-
-function panToImage(index) {
-    // zoom to level 14 first
-    map.setZoom(14);
-    // pan to the marker
-    map.panTo(markers.getLayers()[index]._latlng);
+    redmarkers.addTo(map)
+    orangemarkers.addTo(map)
+    yellowmarkers.addTo(map)
+    greenmarkers.addTo(map)
+    bluemarkers.addTo(map)
+    violetmarkers.addTo(map)
 }

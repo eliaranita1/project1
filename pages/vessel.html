@@ -2,82 +2,114 @@
 <html>
 
 <head>
-    <title>Fishing Vessels</title>
-    <meta charset="utf-8" />
+  <title>Fishing Vessels</title>
+  <meta charset="utf-8" />
 
-    <!-- style sheets -->
-    <link rel="stylesheet" href="../css/vessel.css">
+  <!-- style sheets -->
+  <link rel="stylesheet" href="../css/vessel.css">
 
-     <!-- leaflet -->
-     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-     <script src="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.css" />
+  <!-- leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.css" />
 
-     <!-- papaparse-->
-    <script src="../js/papaparse.min.js"></script>
+  <!-- papaparse-->
+  <script src="../js/papaparse.min.js"></script>
 
 
-    <!-- jquery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-    <div class="header">
-        <div class="navbar">
-            <a href="home.html">Home</a>
-            <a href="micro.html">Microplastics</a>
-            <a href="page3.html">Map</a>
-            <a href="vessel.html">Fishing Vessels</a>
-            <div class="dropdown">
-                <button class="dropbtn">Make a Difference
-                  <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                  <a href="leg.html">Current Legislation</a>
-                  <a href="#">Other Organizations</a>
-                  <a href="#">What Next?</a>
-                </div>
-              </div>
-            <div class="dropdown">
-              <button class="dropbtn">About
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <a href="team.html">Meet the Team</a>
-                <a href="#">About the Project</a>
-                <a href="#">Map Instructions</a>
-              </div>
-            </div>
-          </div>
+  <div class="header">
+    <div class="navbar">
+      <a href="home.html">Home</a>
+      <a href="micro.html">Microplastics</a>
+      <a href="page3.html">Map</a>
+      <a href="vessel.html">Fishing Vessels</a>
+      <div class="dropdown">
+        <button class="dropbtn">Make a Difference
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="leg.html">Current Legislation</a>
+          <a href="#">Other Organizations</a>
+          <a href="#">What Next?</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">About
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="team.html">Meet the Team</a>
+          <a href="#">About the Project</a>
+          <a href="#">Map Instructions</a>
+        </div>
+      </div>
     </div>
-    
-    <div class="content">
-        <p style="text-align: center; font-size: 40px;font-family: sans-serif; font-weight: bold;">
-            Presence of Fishing Vessels
-        </p> <br>
-        <div id="map"></div>
-        <br>
-        <p style="margin: 20px; font-size: 20px; font-family: sans-serif;background-color: aliceblue;">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
-            vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
-            ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
-            augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
-            in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
-            Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
-        </p>
-        <br>
+  </div>
 
+  <div class="title">
+    <p style="text-align: center; font-size: 40px;font-family: sans-serif; font-weight: bold;">
+      Presence of Fishing Vessels
+    </p>
+  </div>
 
+  <div class="content">
+    <div class='tableauPlaceholder' id='viz1619934712036' style='position: relative'><noscript><a href='#'><img
+            alt='Overall Map '
+            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6F&#47;6FishingBoatsVisualized2012-2020&#47;OverallMap&#47;1_rss.png'
+            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+        <param name='embed_code_version' value='3' />
+        <param name='site_root' value='' />
+        <param name='name' value='6FishingBoatsVisualized2012-2020&#47;OverallMap' />
+        <param name='tabs' value='no' />
+        <param name='toolbar' value='yes' />
+        <param name='static_image'
+          value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;6F&#47;6FishingBoatsVisualized2012-2020&#47;OverallMap&#47;1.png' />
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en' />
+      </object></div>
+    <script type='text/javascript'>
+      var divElement = document.getElementById('viz1619934712036');
+      var vizElement = divElement.getElementsByTagName('object')[0];
+      if (divElement.offsetWidth > 800) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      }
+      else if (divElement.offsetWidth > 500) {
+        vizElement.style.width = '100%';
+        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+      } else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
+      var scriptElement = document.createElement('script');
+      scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+      vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+    <!-- <div id="map"></div> -->
+  </div>
 
-    </div>
-    
-
-    <script src="../js/vessel.js"></script>
+  <div class="text">
+    <p style="margin: 20px; font-size: 20px; font-family: sans-serif;background-color: aliceblue; margin-bottom: 20px;">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio,
+      vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est,
+      ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum
+      augue ut aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis
+      in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue.
+      Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac...
+    </p>
+  </div>
+  <!-- <script  src="../js/vessel.js"></script> -->
 
 </body>
 
