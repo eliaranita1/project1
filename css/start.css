@@ -9,6 +9,7 @@ body, html {
     margin: auto;
     padding-bottom: 10%;
     background-color: rgba(0, 0, 0, 0.959);
+    color: cadetblue;
     width: 40%;
     border: 4px solid black;
     border-radius: 20px;
