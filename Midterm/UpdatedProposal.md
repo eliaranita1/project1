@@ -1,6 +1,6 @@
 ## Updated Proposal - Ocean Pollution Posse
 
-![Dumped Fishing Gear](https://github.com/eliaranita1/project1/blob/main/dumpedfishinggear.png)
+![Dumped Fishing Gear](https://github.com/eliaranita1/project1/blob/main/photos/dumpedfishinggear.png)
 
 ## Hi, We're the Ocean Pollution Posse. 
 
@@ -32,7 +32,7 @@ Our team aims to investigate international fishing patterns and how fishing acti
 We will present our data and findings through interactive web maps. We chose this medium because web maps can easily display information with a location component to it.
 
 ## Timeline
-![timeline](https://github.com/eliaranita1/project1/blob/main/timeline.png)
+![timeline](https://github.com/eliaranita1/project1/blob/main/photos/timeline.png)
 
 ## Technical scope
 We will use the following technologies in our project.
