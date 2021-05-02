@@ -71,6 +71,6 @@ We chose to do our wireframes on Moqups and have left a brief overview below. Cl
 
 ## The Website Prototype!
 
-Click this link to access our interactive website! [Ocean Pollution Posse Home](https://eliaranita1.github.io/project1/pages/home.html)
+Click this link to access our interactive website! [Ocean Pollution Posse Home](https://eliaranita1.github.io/project1/landing.html)
 
 
