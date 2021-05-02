@@ -41,6 +41,8 @@ body, html {
     grid-area: content;
     background-image: url('../photos/trash.jpg');
     background-size: cover;
+    background-color: rgba(24, 24, 26, 0.564);
+    background-blend-mode: multiply;
 }
 
 a {
