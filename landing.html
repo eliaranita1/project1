@@ -10,12 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap" rel="stylesheet">
 
-
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-        <script src="js/start.js"></script>
 
 </head>
 
@@ -25,13 +22,24 @@
 
         <div id="quiz">
             What is the greatest contributor to plastic pollutants in the ocean? <br><br><br>
-            <button class="button" onclick = "goHome('w')" type="button">Industrial Waste</button> <br>
-            <button class="button" onclick = "goHome('p')" type="button">Consumer Plastics</button> <br>
-            <button class="button" onclick = "goHome('f')" type="button">Fishing Gear</button> <br>
-            <button class="button" onclick = "goHome('t')" type="button">Restaurant Takeout</button>
+            <button id="myBtn1" class="button" type="button">Industrial Waste</button> <br>
+            <button id="myBtn2" class="button" type="button">Consumer Plastics</button> <br>
+            <button id="myBtn3" class="button" type="button">Fishing Gear</button> <br>
+            <button id="myBtn4" class="button" type="button">Restaurant Takeout</button>
         </div>
     </div>
 
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="answer">Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <script src="js/start.js"></script>
 </body>
 
 </html>
