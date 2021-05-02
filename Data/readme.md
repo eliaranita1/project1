@@ -3,7 +3,7 @@
 Click on this link to see how we cleaned and manipulated the data: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/eliaranita1/project1/HEAD)
 
 
-### We have decided to narrow down our data down to these datasets:
+### Our Datasets:
 
 1. Plastic Data Set: Estimate of Plastic Pollution in the World's Ocean link
     1. Years: 2007-2013
