@@ -68,7 +68,7 @@ We chose to do our wireframes on Moqups and have left a brief overview below. Cl
   <img src="/Group%20Assignments/%232/wireframes.png" width="1000" />
 </p>
 
-For the midterm, we also decided to create a high-fidelity mockup to guide our process. To view the prototype on Figma, click [here](https://www.figma.com/proto/Z1TffVc1XTlTrtZqeY8NsY/DH151?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1)
+For the midterm, we also decided to create a high-fidelity mockup to guide our process. To view the prototype on Figma, click [here](https://www.figma.com/proto/Z1TffVc1XTlTrtZqeY8NsY/DH151?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1).
 
 <p>
     <img src = "https://github.com/eliaranita1/project1/blob/main/photos/Screen%20Shot%202021-05-02%20at%2011.07.27%20PM.png" />
