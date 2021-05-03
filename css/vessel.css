@@ -9,7 +9,7 @@ body {
     display: grid;
     grid-template-rows: 80px 150px 500px 250px ;
     grid-template-areas: "header" "title" "content" "text";
-    background-color: rgb(17, 22, 22);
+    /* background-color: rgb(17, 22, 22); */
 }
 
 .header {
