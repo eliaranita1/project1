@@ -4,18 +4,21 @@ let lat = 0;
 let lon = 0;
 let zl = 2;
 let path = "../Data/important-vessels.csv";
+let ppath = "../Data/PlasticMarinePollution.csv";
 let redmarkers = L.featureGroup();
 let orangemarkers = L.featureGroup();
 let bluemarkers = L.featureGroup();
 let yellowmarkers = L.featureGroup();
 let greenmarkers = L.featureGroup();
 let violetmarkers = L.featureGroup();
+let plastic = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius: 30});
 
 
 // initialize
 $(document).ready(function () {
     createMap(lat, lon, zl);
     readCSV(path);
+    readCSV2(ppath);
 });
 
 // create the map
@@ -37,11 +40,39 @@ function readCSV(path) {
         Worker: true,
         download: true,
         complete: function (data) {
-           // console.log(data);
+            console.log(data);
             // map the data
-            mapCSV(data);
+             mapCSV(data);
         }
     });
+}
+
+function readCSV2(ppath) {
+    Papa.parse(ppath, {
+        header: true,
+        Worker: true,
+        download: true,
+        complete: function (data) {
+            console.log(data);
+            // map the data
+            mapCSV2(data);
+        }
+    });
+}
+
+
+function mapCSV2(data) {
+    // loop through each entry
+    data.data.forEach(function (item, index) {  
+        
+                let trash = L.circleMarker([item.Lat, item.Lon], { color: "black" });
+                // add marker to featuregroup
+                plastic.addLayer(trash);
+    })
+    let overlayMaps = {
+        " major plastic pollution": plastic,       
+    };
+    L.control.layers(null, overlayMaps).addTo(map);
 }
 
 function mapCSV(data) {
@@ -86,11 +117,14 @@ function mapCSV(data) {
         }
     })
 
-    // add featuregroup to map
-    redmarkers.addTo(map)
-    orangemarkers.addTo(map)
-    yellowmarkers.addTo(map)
-    greenmarkers.addTo(map)
-    bluemarkers.addTo(map)
-    violetmarkers.addTo(map)
+    var overlayMaps = {
+        "Ship 1": redmarkers,
+        "Ship 2": orangemarkers,
+        "Ship 3": yellowmarkers,
+        "Ship 4": greenmarkers,
+        "Ship 5": bluemarkers,
+        "Ship 6": violetmarkers
+    };
+
+    L.control.layers(null, overlayMaps).addTo(map);
 }
