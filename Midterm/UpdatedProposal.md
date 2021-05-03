@@ -68,6 +68,7 @@ We chose to do our wireframes on Moqups and have left a brief overview below. Cl
   <img src="/Group%20Assignments/%232/wireframes.png" width="1000" />
 </p>
 
+To view a high-fidelity prototype on Figma, click [here](https://www.figma.com/file/Z1TffVc1XTlTrtZqeY8NsY/DH151?node-id=0%3A1)
 
 ## The Website Prototype!
 
