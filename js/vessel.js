@@ -118,12 +118,12 @@ function mapCSV(data) {
     })
 
     var overlayMaps = {
-        "Ship 1": redmarkers,
-        "Ship 2": orangemarkers,
-        "Ship 3": yellowmarkers,
-        "Ship 4": greenmarkers,
-        "Ship 5": bluemarkers,
-        "Ship 6": violetmarkers
+        "Spain": redmarkers,
+        "Ecuador": orangemarkers,
+        "Japan": yellowmarkers,
+        "Norway (pots/traps)": greenmarkers,
+        "Falkland Islands": bluemarkers,
+        "Norway (nets)": violetmarkers
     };
 
     L.control.layers(null, overlayMaps).addTo(map);
