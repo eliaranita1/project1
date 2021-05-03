@@ -17,7 +17,7 @@ body, html {
 .navbar a {
   float: left;
   font-size: 25px;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   text-align: center;
   padding: 14px 16px;
@@ -37,7 +37,7 @@ body, html {
   font-size: 25px;
   border: none;
   outline: none;
-  color: black;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   padding: 14px 16px;
   background-color: inherit;
@@ -109,9 +109,11 @@ body {
 }
 
 .sidebar {
-  color: cadetblue;
+  color: rgb(255, 255, 255);
   grid-area: sidebar;
   padding: 10px;
+  filter: brightness(100%);
+  background-image: url(https://www.pewtrusts.org/-/media/post-launch-images/2020/10/gettyimages1223473846jpgmaster/16x9_m.jpg?mw=2580&hash=7651902412A7BB1E94A8D83923DCAEB6);
   background-color:rgb(17, 22, 22);
   overflow: auto;
   font-family: sans-serif;
