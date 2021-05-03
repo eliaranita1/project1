@@ -2,38 +2,11 @@ body, html {
     margin: 0;
     height: 100%;
     width: 100%;
-}
-
-
-body {
-    display: grid;
-    grid-template-rows: 80px 150px 500px 250px ;
-    grid-template-areas: "header" "title" "content" "text";
-    background-color: rgb(17, 22, 22);
-}
-
-.header {
-        grid-area: header;
-        text-align: center;
-        padding: 10px;
-        background-color: darkslategray;
-}
-
-#map {
-    margin: auto;
-    height: 100%;
-    border: 3px solid black;
-    background-color: rgb(17, 22, 22);
-}
-
-.content {
-    grid-area: content;
-    background-color: rgb(17, 22, 22);
-}
-
-/* Navbar container */
+  }
   
-.navbar {
+  /* Navbar container */
+    
+  .navbar {
     overflow: hidden;
     background-color: darkslategray;
     font-family: Arial;
@@ -105,7 +78,7 @@ body {
   /* Add a background color to dropdown links on hover */
   
   .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color:cadetblue;
   }
   
   /* Show the dropdown menu on hover */
@@ -113,11 +86,37 @@ body {
   .dropdown:hover .dropdown-content {
     display: block;
   }
-
+  
   .leaflet-container {
+      margin: auto;
      position: relative;
      outline: none;
      width: 70%;
      background-color: rgb(17, 22, 22);
   } 
+  
+  body {
+    display: grid;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "header" "content";
+  }
+  
+  .header {
+    grid-area: header;
+    text-align: center;
+    padding: 10px;
+    background-color: darkslategray
+  }
+  
+  .content {
+    grid-area: content;
+  }
+  
+  a {
+    font-size: 25px;
+    color: cornflowerblue;
+    padding: 0px 10px;
+    word-wrap: normal;
+    display: inline-block;
+  }
   

@@ -5,10 +5,10 @@ body, html {
 }
 
 /* Navbar container */
-
+  
 .navbar {
   overflow: hidden;
-  background-color: darkseagreen;
+  background-color: darkslategray;
   font-family: Arial;
 }
 
@@ -50,7 +50,7 @@ body, html {
 /* Add a background color to navbar links on hover */
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: cornflowerblue;
+  background-color: cadetblue;
 }
 
 /* Dropdown content (hidden by default) */
@@ -58,7 +58,7 @@ body, html {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: darkslategray;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
@@ -78,7 +78,7 @@ body, html {
 /* Add a background color to dropdown links on hover */
 
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: cadetblue;
 }
 
 /* Show the dropdown menu on hover */
@@ -86,6 +86,13 @@ body, html {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+.leaflet-container {
+   position: relative;
+   outline: none;
+   width: 70%;
+   background-color: rgb(17, 22, 22);
+} 
 
 body {
   display: grid;
@@ -98,14 +105,14 @@ body {
   grid-area: header;
   text-align: center;
   padding: 10px;
-  background-color: darkseagreen;
+  background-color: darkslategray;
 }
 
 .sidebar {
-  color: black;
+  color: cadetblue;
   grid-area: sidebar;
   padding: 10px;
-  background-color: lightblue;
+  background-color:rgb(17, 22, 22);
   overflow: auto;
   font-family: sans-serif;
   text-align: center;
@@ -113,6 +120,7 @@ body {
 
 .content {
   grid-area: content;
+  background-color: rgb(17, 22, 22);
 }
 
 a {
@@ -125,7 +133,7 @@ a {
 
 .button {
   border: 2px solid black;
-  color: white;
+  color: cadetblue;
   background-color: darkslategray;
   padding: 15px 32px;
   text-align: center;
@@ -139,6 +147,6 @@ a {
 }
 
 .button:hover {
-  background-color: #4CAF50;
+  background-color: rgb(17, 22, 22);;
   color: white;
 }
