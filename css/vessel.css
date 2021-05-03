@@ -20,9 +20,7 @@ body {
 }
 
 #map {
-    margin: auto;
     height: 100%;
-    border: 3px solid black;
     background-color: rgb(17, 22, 22);
 }
 
