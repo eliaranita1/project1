@@ -21,6 +21,7 @@ body {
 
 #map {
     height: 500px;
+    margin: auto;
 }
 
 .content {
