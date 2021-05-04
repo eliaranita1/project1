@@ -3,7 +3,7 @@
 | To - Do  | Who |  Priority | Status |
 | ------------- | ------------- | ------------- | ------------- |
 | Describe the Map (i.e., what the boats mean, and what they are doing in the ocean)  | Julia  |  1 - Highest Priority |  |
-| Upload protected areas data to github | Julia  |  2 | Done - csv file uploaded! |
+| Upload protected areas data to github | Julia  |  2 | Done (csv and shp folders) |
 | Implement the other data sets into the web map  | Eli  |  3 |  |
 | Content Cell  | Content Cell  |  4 |  |
 | Content Cell  | Content Cell  |  5 |  |
