@@ -174,17 +174,20 @@ function createDashboard(properties){
 	console.log(properties)
 
 	// chart title
-	let title = 'Top Mismanaged Waste Contributors in ' + properties.continent;
+	let title = 'Top Mismanaged Waste Contributors in ' + properties['continent'];
 
+	//new data
+	//let sorted_data = properties.filter(function(properties))
 	// filter data to be just continent
+	//properties['Total mismanaged plastic waste in 2010']
 	// sort the data from highest to lowest
 	// access the first five data points.
 
 	// data values
-	let data = [27,17,17,20];
+	let data = [10000,1000,500,20];
 
 	// data fields
-	let fields = ['New York Yankees','LA Lakers','Boston Celtics','Manchester United'];
+	let fields = ['Country 1','Country 2','Country 3','Country 4'];
 
 	// set chart options
 	let options = {
