@@ -1,7 +1,10 @@
+
 body, html {
-  margin: 0;
+  margin: 0 auto ;
   height: 100%;
   width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:100
 }
 
 /* Navbar container */
@@ -116,8 +119,10 @@ body {
   background-image: url(https://www.pewtrusts.org/-/media/post-launch-images/2020/10/gettyimages1223473846jpgmaster/16x9_m.jpg?mw=2580&hash=7651902412A7BB1E94A8D83923DCAEB6);
   background-color:rgb(17, 22, 22);
   overflow: auto;
-  font-family: sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.564);
+  background-blend-mode: multiply;
 }
 
 .content {
