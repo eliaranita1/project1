@@ -127,7 +127,7 @@ body {
 
 .content {
   grid-area: content;
-  background-color: rgb(17, 22, 22);
+  background-color: rgb(255, 255, 255);
 }
 
 a {

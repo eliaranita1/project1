@@ -2,6 +2,8 @@ body, html {
   margin: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:100
 }
 
 /* Navbar container */
@@ -91,7 +93,7 @@ body {
   display: grid;
   grid-template-rows: 80px 1fr;
   grid-template-areas: "header" "content";
-  background-color: rgb(17, 22, 22);
+  background-color: rgb(255, 255, 255);
 }
 
 .header {
@@ -103,8 +105,8 @@ body {
 
 .content {
   grid-area: content;
-  background-color: rgb(17, 22, 22);
-  color: cadetblue;
+  background-color: rgb(255, 255, 255);
+  color: rgb(36, 37, 37);
 }
 
 a {
@@ -113,6 +115,7 @@ a {
   padding: 0px 10px;
   word-wrap: normal;
   display: inline-block;
+  
 }
 
 .clearfix {
