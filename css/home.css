@@ -11,8 +11,15 @@ body, html {
   
 .navbar {
   overflow: hidden;
-  background-color: darkslategray;
+  background-color: rgb(10, 15, 15);
   font-family: Arial;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(10, 15, 15);
 }
 
 /* Links inside the navbar */
@@ -100,16 +107,10 @@ body, html {
 body {
   display: grid;
   grid-template-rows: 80px 1fr;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 100% 0%;
   grid-template-areas: "header header" "sidebar content";
 }
 
-.header {
-  grid-area: header;
-  text-align: center;
-  padding: 10px;
-  background-color: darkslategray;
-}
 
 .sidebar {
   color: rgb(255, 255, 255);
@@ -123,6 +124,7 @@ body {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.564);
   background-blend-mode: multiply;
+  height: 1000px;
 }
 
 .content {
