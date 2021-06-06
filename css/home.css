@@ -4,7 +4,7 @@ body, html {
   height: 100%;
   width: 100%;
   font-family: 'Source Sans Pro', sans-serif;
-  font-weight:100
+  font-weight:100;
 }
 
 /* Navbar container */
@@ -141,9 +141,8 @@ a {
 }
 
 .button {
-  border: 2px solid black;
-  color: cadetblue;
-  background-color: darkslategray;
+  color: rgb(0, 0, 0);
+  background-color: rgb(119, 145, 145);
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -152,10 +151,13 @@ a {
   font-weight: bold;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 7px;  /* rounded edges*/
+  border-radius: 15px;  /* rounded edges*/
+  opacity: 90%;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight:400;
 }
 
 .button:hover {
-  background-color: rgb(17, 22, 22);;
+  background-color: rgb(94, 114, 114);
   color: white;
 }
