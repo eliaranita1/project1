@@ -350,14 +350,6 @@ function zoomTo(e) {
 console.log(e);
 
 console.log(geojson_layer._layers)
+map.fitBounds(geojson_layer.getLayers()[e-1].getBounds());
 
-if (e == 1){
-    map.fitBounds(geojson_layer.getLayer(34+e).getBounds());
-}
-else if (e == 2){
-map.setView([10.45,-61.4,5])
-}
-else{
-    map.fitBounds(geojson_layer.getLayer(35+e).getBounds());
-}
 }
