@@ -88,16 +88,18 @@ a {
 /* Modal Content/Box */
 
 .modal-content {
-    background-color: darkslategrey;
-    color: cadetblue;
+    background-color: rgb(226, 255, 255);
+    color: rgb(1, 22, 21);
     font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    margin: 15% auto;
+    font-family: "Source Sans Pro";
+    font-weight: 100;
+    margin: 20%;
+    margin-left: 31.5%; 
+
     /* 15% from the top and centered */
     padding: 20px;
     border: 2px solid black;
-    width: 80%;
+    width: 35%;
     /* Could be more or less, depending on screen size */
 }
 
