@@ -12,19 +12,19 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn1.onclick = function () {
-    document.getElementById("answer").innerHTML = "While industrial waste is indeed a contributor to plastic pollution, fishing gear actually accounts for the greatest amount. It is estimated that “around 640,000 to 800,000 tons of fishing gear is lost annually world wide, and account for 10% of all plastic pollution and perhaps as much as 70% of all macroplastics when estimated by weight in our ocean.";
+    document.getElementById("answer").innerHTML = "Not Quite! At least 8 million tons of plastic end up in our oceans every year, and make up 80% of all marine debris from surface waters to deep-sea sediments. Click anywhere to continue. - https://www.iucn.org/resources/issues-briefs/marine-plastics";
     modal.style.display = "block";
 }
 btn2.onclick = function () {
-    document.getElementById("answer").innerHTML = "While consumer plastics are indeed a contributor to plastic pollution, fishing gear actually accounts for the greatest amount. It is estimated that “around 640,000 to 800,000 tons of fishing gear is lost annually world wide, and account for 10% of all plastic pollution and perhaps as much as 70% of all macroplastics when estimated by weight in our ocean.";
+    document.getElementById("answer").innerHTML = "Not Quite! At least 8 million tons of plastic end up in our oceans every year, and make up 80% of all marine debris from surface waters to deep-sea sediments. Click anywhere to continue. - https://www.iucn.org/resources/issues-briefs/marine-plastics";
     modal.style.display = "block";
 }
 btn3.onclick = function () {
-    document.getElementById("answer").innerHTML = "Correct! It is estimated that “around 640,000 to 800,000 tons of fishing gear is lost annually world wide, and account for 10% of all plastic pollution and perhaps as much as 70% of all macroplastics when estimated by weight in our ocean."
+    document.getElementById("answer").innerHTML = "Correct! At least 8 million tons of plastic end up in our oceans every year, and make up 80% of all marine debris from surface waters to deep-sea sediments. Click anywhere to continue. - https://www.iucn.org/resources/issues-briefs/marine-plastics";
     modal.style.display = "block";
 }
 btn4.onclick = function () {
-    document.getElementById("answer").innerHTML = "While restaurant takeout is indeed a contributor to plastic pollution, fishing gear actually accounts for the greatest amount. It is estimated that “around 640,000 to 800,000 tons of fishing gear is lost annually world wide, and account for 10% of all plastic pollution and perhaps as much as 70% of all macroplastics when estimated by weight in our ocean.";
+    document.getElementById("answer").innerHTML = "Not Quite! At least 8 million tons of plastic end up in our oceans every year, and make up 80% of all marine debris from surface waters to deep-sea sediments. Click anywhere to continue. - https://www.iucn.org/resources/issues-briefs/marine-plastics";
     modal.style.display = "block";
 }
 

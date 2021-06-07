@@ -3,27 +3,33 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: black;
+    background-image: url('../photos/trash.jpg');
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.564);
+    background-blend-mode: multiply;
+    
 }
 
 #quiz {
     margin: auto;
+    margin-top: 10%;
+    background-color: rgb(22, 22, 22); 
+    background-blend-mode: multiply;
     padding-bottom: 10%;
-    background-color: rgba(0, 0, 0, 0.959);
-    color: cadetblue;
+    color: rgb(255, 255, 255);
     width: 40%;
-    border: 4px solid black;
     border-radius: 20px;
     font-size: xx-large;
     font-weight: bold;
-    font-family: 'Sawarabi Mincho', sans-serif;
+    font-family: 'Monterrat', sans-serif;
     text-align: center;
 }
 
 .button {
     border: 2px solid black;
     border-radius: 15px;
-    background-color: darkslategrey;
-    color: cadetblue;
+    background-color: rgb(80, 114, 114);
+    color: rgb(255, 255, 255);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -31,6 +37,7 @@ body, html {
     font-size: 30px;
     margin: 4px 2px;
     cursor: pointer;
+    width: 75%;
 }
 
 .button:hover {
@@ -40,10 +47,7 @@ body, html {
 
 .content {
     grid-area: content;
-    background-image: url('../photos/trash.jpg');
-    background-size: cover;
-    background-color: rgba(24, 24, 26, 0.564);
-    background-blend-mode: multiply;
+
 }
 
 a {
@@ -84,16 +88,18 @@ a {
 /* Modal Content/Box */
 
 .modal-content {
-    background-color: darkslategrey;
-    color: cadetblue;
+    background-color: rgb(226, 255, 255);
+    color: rgb(1, 22, 21);
     font-size: 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    margin: 15% auto;
+    font-family: "Source Sans Pro";
+    font-weight: 100;
+    margin: 20%;
+    margin-left: 31.5%; 
+
     /* 15% from the top and centered */
     padding: 20px;
     border: 2px solid black;
-    width: 80%;
+    width: 35%;
     /* Could be more or less, depending on screen size */
 }
 
