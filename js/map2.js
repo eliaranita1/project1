@@ -9,9 +9,11 @@ let markers = L.featureGroup();
 let geojsonPath = '../Data/final_data.json';
 let geojson_data;
 let geojson_layer;
+let zoomdata = [];
+let values = [];
 
 let brew = new classyBrew();
-let legend = L.control({position: 'bottomright'});
+let legend = L.control({ position: 'bottomright' });
 let info_panel = L.control();
 
 let fieldtomap = 'plastic_waste_2010';
@@ -19,19 +21,19 @@ let fieldtomap = 'plastic_waste_2010';
 
 
 // initialize
-$( document ).ready(function() {
-	createMap(lat,lon,zl);
-	getGeoJSON();
-	//readCSV(path);
+$(document).ready(function () {
+    createMap(lat, lon, zl);
+    getGeoJSON();
+    //readCSV(path);
 });
 
 // create the map
-function createMap(lat,lon,zl){
-	map = L.map('map').setView([lat,lon], zl);
+function createMap(lat, lon, zl) {
+    map = L.map('map').setView([lat, lon], zl);
 
-	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
 }
 
 // function to read csv data
@@ -41,7 +43,7 @@ function createMap(lat,lon,zl){
 // 		download: true,
 // 		complete: function(csvdata) {
 // 			console.log(csvdata);
-			
+
 // 			// map the csvdata
 // 			mapCSV(csvdata);
 // 		}
@@ -49,279 +51,313 @@ function createMap(lat,lon,zl){
 // }
 
 // function to get the geojson data
-function getGeoJSON(){
+function getGeoJSON() {
 
-	$.getJSON(geojsonPath,function(data){
-		console.log(data)
+    $.getJSON(geojsonPath, function (data) {
+        console.log(data)
 
-		// put the data in a global variable
-		geojson_data = data;
+        // put the data in a global variable
+        geojson_data = data;
 
-		// call the map function
-		mapGeoJSON(fieldtomap, 7, 'Reds') // add a field to be used
-	})
+        // call the map function
+        mapGeoJSON(fieldtomap, 7, 'Reds') // add a field to be used
+    })
 }
 
-function mapGeoJSON(field,num_classes,color,scheme){
+function mapGeoJSON(field, num_classes, color, scheme) {
 
-	// clear layers in case it has been mapped already
-	if (geojson_layer){
-		geojson_layer.clearLayers()
-	}
-	
-	// globalize the field to map
-	fieldtomap = field;
+    // clear layers in case it has been mapped already
+    if (geojson_layer) {
+        geojson_layer.clearLayers()
+    }
 
-	// create an empty array
-	let values = [];
+    // globalize the field to map
+    fieldtomap = field;
 
-	// based on the provided field, enter each value into the array
-	geojson_data.features.forEach(function(item,index){
-		if((item.properties[field] != undefined ) ){
-			values.push(item.properties[field])
-		}
-	})
+    // create an empty array
 
-	// set up the "brew" options
-	brew.setSeries(values);
-	brew.setNumClasses(num_classes);
-	brew.setColorCode(color);
-	brew.classify(scheme);
+    // based on the provided field, enter each value into the array
+    geojson_data.features.forEach(function (item, index) {
+        if ((item.properties[field] != undefined)) {
+            values.push(item.properties[field])
+        }
+    })
 
-	// create the layer and add to map
-	geojson_layer = L.geoJson(geojson_data, {
-		style: getStyle, //call a function to style each feature
-		onEachFeature: onEachFeature // actions on each feature
-	}).addTo(map);
+    // set up the "brew" options
+    brew.setSeries(values);
+    brew.setNumClasses(num_classes);
+    brew.setColorCode(color);
+    brew.classify(scheme);
 
-	map.fitBounds(geojson_layer.getBounds())
+    // create the layer and add to map
+    geojson_layer = L.geoJson(geojson_data, {
+        style: getStyle, //call a function to style each feature
+        onEachFeature: onEachFeature // actions on each feature
+    }).addTo(map);
+    console.log(geojson_layer)
+    console.log(geojson_layer.getBounds())
+    map.fitBounds(geojson_layer.getBounds())
 
-	// create the legend
-	createLegend();
+    // create the legend
+    createLegend();
 
-	// create the infopanel
-	createInfoPanel();
+    // create the infopanel
+    createInfoPanel();
 
-	// create table
-	createTable();
+    // create table
+    createTable();
 }
 
-function getStyle(feature){
-	return {
-		stroke: true,
-		color: 'white',
-		weight: 1,
-		fill: true,
-		fillColor: brew.getColorInRange(feature.properties[fieldtomap]),
-		fillOpacity: 0.8
-	}
+function getStyle(feature) {
+    return {
+        stroke: true,
+        color: 'white',
+        weight: 1,
+        fill: true,
+        fillColor: brew.getColorInRange(feature.properties[fieldtomap]),
+        fillOpacity: 0.8
+    }
 }
 
-function createLegend(){
-	legend.onAdd = function (map) {
-		var div = L.DomUtil.create('div', 'info legend'),
-		breaks = brew.getBreaks(),
-		labels = [],
-		from, to;
-		
-		for (var i = 0; i < breaks.length; i++) {
-			from = breaks[i];
-			to = breaks[i + 1];
-			if(to) {
-				labels.push(
-					'<i style="background:' + brew.getColorInRange(to) + '"></i> ' +
-					from.toFixed(0) + ' &ndash; ' + to.toFixed(0));
-				}
-			}
-			
-			div.innerHTML = labels.join('<br>');
-			return div;
-		};
-		
-		legend.addTo(map);
+function createLegend() {
+    legend.onAdd = function (map) {
+        var div = L.DomUtil.create('div', 'info legend'),
+            breaks = brew.getBreaks(),
+            labels = [],
+            from, to;
+
+        for (var i = 0; i < breaks.length; i++) {
+            from = breaks[i];
+            to = breaks[i + 1];
+            if (to) {
+                labels.push(
+                    '<i style="background:' + brew.getColorInRange(to) + '"></i> ' +
+                    from.toFixed(0) + ' &ndash; ' + to.toFixed(0));
+            }
+        }
+
+        div.innerHTML = labels.join('<br>');
+        return div;
+    };
+
+    legend.addTo(map);
 }
 
-function createInfoPanel(){
+function createInfoPanel() {
 
-	info_panel.onAdd = function (map) {
-		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
-		this.update();
-		return this._div;
-	};
+    info_panel.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+        this.update();
+        return this._div;
+    };
 
-	// method that we will use to update the control based on feature properties passed
-	info_panel.update = function (properties) {
-		// if feature is highlighted
-		if(properties){
-			this._div.innerHTML = `<b>${properties['country']}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
-		}
-		// if feature is not highlighted
-		else
-		{
-			this._div.innerHTML = 'Hover over a country';
-		}
-	};
+    // method that we will use to update the control based on feature properties passed
+    info_panel.update = function (properties) {
+        // if feature is highlighted
+        if (properties) {
+            this._div.innerHTML = `<b>${properties['country']}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+        }
+        // if feature is not highlighted
+        else {
+            this._div.innerHTML = 'Hover over a country';
+        }
+    };
 
-	info_panel.addTo(map);
+    info_panel.addTo(map);
 }
 
 // Function that defines what will happen on user interactions with each feature
 function onEachFeature(feature, layer) {
-	layer.on({
-		mouseover: highlightFeature,
-		mouseout: resetHighlight,
-		click: zoomToFeature
-	});
+    layer.on({
+        mouseover: highlightFeature,
+        mouseout: resetHighlight,
+        click: zoomToFeature
+    });
 }
 
 // on mouse over, highlight the feature
 function highlightFeature(e) {
-	var layer = e.target;
+    var layer = e.target;
 
-	// style to use on mouse over
-	layer.setStyle({
-		weight: 2,
-		color: '#666',
-		fillOpacity: 0.7
-	});
+    // style to use on mouse over
+    layer.setStyle({
+        weight: 2,
+        color: '#666',
+        fillOpacity: 0.7
+    });
 
-	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-		layer.bringToFront();
-	}
+    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+        layer.bringToFront();
+    }
 
-	info_panel.update(layer.feature.properties);
+    info_panel.update(layer.feature.properties);
 
-	createDashboard(layer.feature.properties);
+    createDashboard(layer.feature.properties);
 
 }
 
 // on mouse out, reset the style, otherwise, it will remain highlighted
 function resetHighlight(e) {
-	geojson_layer.resetStyle(e.target);
-	info_panel.update() // resets infopanel
+    geojson_layer.resetStyle(e.target);
+    info_panel.update() // resets infopanel
 }
 
 // on mouse click on a feature, zoom in to it
 function zoomToFeature(e) {
-	map.fitBounds(e.target.getBounds());
+    console.log(e.target)
+    console.log(e.target.getBounds())
+    map.fitBounds(e.target.getBounds());
 }
 
-function createDashboard(properties){
+function createDashboard(properties) {
 
-	// clear dashboard
-	$('.dashboard').empty();
+    // clear dashboard
+    $('.dashboard').empty();
 
-	console.log(properties)
+    //console.log(properties)
 
-	// chart title
-	let title = 'Gross Domestic Product (GDP) & Population in ' + properties['country'];
+    // chart title
+    let title = 'Gross Domestic Product (GDP) & Population in ' + properties['country'];
 
-	// data values
-	let data = [
-		properties['gdp_md_est'],
-		properties['plastic_waste_2010']
-	]
-	
-	// data fields
-	let fields = [
-		'GDP Estimate (2010)',
-		'Total Mismanaged Plastic Waste',
-	]
+    // data values
+    let data = [
+        properties['gdp_md_est'],
+        properties['plastic_waste_2010']
+    ]
 
-	// chart options
-	var options = {
-		chart: {
-			type: 'bar',
-			height: 300,
-			animations: {
-				enabled: false,
-			}
-		},
-		title: {
-			text: title
-		},
-		plotOptions: {
-			bar: {
-				horizontal: true
-			}
-		},
-		series: [
-			{
-				data: data
-			}
-		],
-		xaxis: {
-			categories: fields
-		}
-	}
-	
-	var options2 = {
-		chart: {
-			type: 'pie',
-			height: 300,
-			width: '100%',			
-			animations: {
-				enabled: false,
-			}
-		},
-		title: {
-			text: 'Gross Domestic Product (GDP) in: ' + properties['country'],
-		},
-		series: data,
-		labels: fields,
-		legend: {
-			position: 'right',
-			offsetY: 0,
-			height: 230,
-		  }
-	};
+    // data fields
+    let fields = [
+        'GDP Estimate (2010)',
+        'Total Mismanaged Plastic Waste',
+    ]
 
-	var chart = new ApexCharts(document.querySelector('.dashboard'), options)
-	chart.render()
-  
+    // chart options
+    var options = {
+        chart: {
+            type: 'bar',
+            height: 300,
+            width: '100%',
+            animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 800,
+                animateGradually: {
+                    enabled: true,
+                    delay: 150
+                },
+                dynamicAnimation: {
+                    enabled: true,
+                    speed: 350
+                }
+            }
+        },
+        title: {
+            text: title
+        },
+        plotOptions: {
+            bar: {
+                horizontal: true
+            }
+        },
+        series: [
+            {
+                data: data
+            }
+        ],
+        xaxis: {
+            categories: fields
+        }
+    }
+
+    var options2 = {
+        chart: {
+            type: 'pie',
+            height: 300,
+            width: '100%',
+            animations: {
+                enabled: true,
+                easing: 'easeinout',
+                speed: 700,
+                animateGradually: {
+                    enabled: true,
+                    delay: 150
+                },
+                dynamicAnimation: {
+                    enabled: true,
+                    speed: 350
+                }
+            }
+        },
+        title: {
+            text: 'Gross Domestic Product (GDP) in: ' + properties['country'],
+        },
+        series: data,
+        labels: fields,
+        legend: {
+            position: 'right',
+            offsetY: 0,
+            height: 230,
+        }
+    };
+
+    var chart = new ApexCharts(document.querySelector('.dashboard'), options)
+    chart.render()
+
 }
 
-function createTable(){
+function createTable() {
 
-	let datafortable = [
-	];
+    let datafortable = [
+    ];
 
-	geojson_data.features.forEach(function(item){
-		datafortable.push(item.properties)
-	})
-	console.log(datafortable)
+    geojson_data.features.forEach(function (item) {
+        datafortable.push(item.properties)
+        zoomdata.push(item.geometry)
+    })
+    console.log(zoomdata)
 
-	let fields = [
-		{ name: "country", type: "text"},
-		{ name: 'gdp_md_est', type: 'number'},
-		{ name: fieldtomap, type: 'number'},
-	]
- 
-	$(".sidebar").jsGrid({
-		width: "100%",
-		height: "400px",
-		
-		editing: true,
-		sorting: true,
-		paging: true,
-		autoload: true,
- 
-		pageSize: 10,
-		pageButtonCount: 5,
- 
-		data: datafortable,
-		fields: fields,
-		rowClick: function(args) { 
-			console.log(args)
-			zoomTo(args.item.GEO_ID)
-		},
-	});
+    let fields = [
+        { name: "country", type: "text" },
+        { name: 'waste_per_person_rank', type: 'number' },
+        { name: 'gdp_md_est', type: 'number' },
+        { name: fieldtomap, type: 'number' },
+        { name: 'plastic_rank', type: 'number' },
+        
+    ]
+
+    $(".sidebar").jsGrid({
+        width: "100%",
+        height: "100%",
+        heading: true,
+        editing: true,
+        sorting: true,
+        paging: false,
+        autoload: false,
+
+        pageSize: 10,
+        pageButtonCount: 5,
+
+        data: datafortable,
+        fields: fields,
+        rowClick: function (datafortable) {
+
+            zoomTo(datafortable.item.waste_per_person_rank)
+        },
+    });
 }
 
-function zoomTo(geoid){
+function zoomTo(e) {
+console.log(e);
 
-	let zoom2poly = geojson_layer.getLayers().filter(item => item.feature.properties.GEO_ID === geoid)
+console.log(geojson_layer._layers)
 
-	map.fitBounds(zoom2poly[0].getBounds())
-
+if (e == 1){
+    map.fitBounds(geojson_layer.getLayer(34+e).getBounds());
+}
+else if (e == 2){
+map.setView([10.45,-61.4,5])
+}
+else{
+    map.fitBounds(geojson_layer.getLayer(35+e).getBounds());
+}
 }
