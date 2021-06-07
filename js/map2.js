@@ -239,11 +239,12 @@ function createDashboard(properties) {
     // data values
     let data = [
         properties['gdp_md_est'],
-        properties['plastic_waste_2010']
+        (properties['plastic_waste_in_tons_per_person']* 100000)
     ]
 
     // data fields
-    let fields = [['GDP Estimate', '2010 (Millions)'], ['Total Mismanaged', 'Plastic Waste', '(Metric Tons)']]
+    let fields = [['GDP Estimate', '2010 (Millions)'], ['Mismanaged', 'Plastic Waste Per'
+    , '100000 People', '(Metric Tons)']]
 
     // chart options
     var options = {

@@ -6,10 +6,17 @@ body, html {
 
 body {
     display: grid;
-    grid-template-rows: 80px 70px 1fr 100px;
-    grid-template-columns: 15% 45% 40%;
-    grid-template-areas: "header header header" "sidebar title dashboard" "sidebar content dashboard" "text text text";
+    grid-template-rows: 80px 70px 1fr;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas: "header header header" "sidebar title dashboard" "sidebar content dashboard";
     background-color: rgb(17, 22, 22);
+}
+
+p {
+    display: block;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 }
 
 .header {
@@ -38,6 +45,8 @@ body {
     overflow: auto;
     font-weight: 700;
     word-wrap: break-word;
+    margin-right: 1%;
+    width: 100%
 }
 
 .dashboard {
@@ -47,13 +56,12 @@ body {
     overflow: auto;
     font-weight: 800;
     word-wrap: break-word;
-    margin-left: -20px;
 }
 
 #map {
     position: relative;
-    height: 100%;
-    margin: 6%;
+    height:100%;
+    margin-left: 6%;
 }
 
 .content {
