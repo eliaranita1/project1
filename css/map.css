@@ -4,6 +4,21 @@ body, html {
     width: 100%;
 }
 
+/* Navbar container */
+  
+.navbar {
+    overflow: hidden;
+    background-color: rgb(10, 15, 15);
+    font-family: Arial;
+  }
+  
+  .header {
+    grid-area: header;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(10, 15, 15);
+  }
+  
 body {
     display: grid;
     grid-template-rows: 80px 70px 1fr;
@@ -19,12 +34,6 @@ p {
     margin-inline-end: 0px;
 }
 
-.header {
-    grid-area: header;
-    text-align: center;
-    padding: 10px;
-    background-color: darkslategray;
-}
 
 .title {
     grid-area: title;
@@ -99,18 +108,13 @@ p {
 
 /* Navbar container */
 
-.navbar {
-    overflow: hidden;
-    background-color: darkslategray;
-    font-family: Arial;
-}
 
 /* Links inside the navbar */
 
 .navbar a {
     float: left;
     font-size: 25px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     text-align: center;
     padding: 14px 16px;
@@ -130,7 +134,7 @@ p {
     font-size: 25px;
     border: none;
     outline: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     padding: 14px 16px;
     background-color: inherit;
