@@ -107,6 +107,7 @@ body {
   grid-area: content;
   background-color: rgb(255, 255, 255);
   color: rgb(36, 37, 37);
+  margin:5%;
 }
 
 a {
