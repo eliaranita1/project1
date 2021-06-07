@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mapping Plastic Pollution</title>
+    <meta charset="utf-8" />
+
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../css/map.css">
+
+    <!-- leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-responsive-popup@0.6.4/leaflet.responsive.popup.css" />
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+
+    <!-- papaparse-->
+    <script src="../js/papaparse.min.js"></script>
+
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="navbar">
+            <a href="../pages/home.html">Home</a>
+            <a href="data.html">Data</a>
+            <a href="vessel.html">Fishing Vessels and Plastic Pollution</a>
+            <div class="dropdown">
+                <button class="dropbtn">Make a Difference
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="leg.html">Propositions</a>
+                    <a href="#">Other Organizations</a>
+                    <a href="#">What Next?</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">About
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="team.html">Meet the Team</a>
+                    <a href="#">About the Project</a>
+                    <a href="#">Map Instructions</a>
+                </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="title">
+            <p
+                style="text-align: center; margin-bottom: 150px; font-size: 40px;font-family: sans-serif; font-weight: bold;  background-color: rgb(17, 22, 22);color: cadetblue;">
+                Mapping Plastic Pollution
+            </p>
+        </div>
+
+        <div class="sidebar">
+            <h2>sidebar title</h2>
+            some text
+        </div>
+
+        <div class="content">
+            <div id="map"> </div>
+        </div>
+
+        <div class="dashboard">
+            bar chart dashboard
+        </div>
+
+        <div class="text">
+            <p
+                style="margin: 20px; font-size: 20px; font-family: sans-serif; background-color: rgb(17, 22, 22); margin-bottom: 20px; color: cadetblue;">
+                Our maps can be navigated by zooming in/out by clicking the +/- or by clicking on a cluster, and by grab
+                & holding the map to change viewing locations. To show data on the map, click the “Layers” icon on the
+                top right to filter data as needed.
+            </p>
+        </div>
+        <script src="../js/map.js"></script>
+
+</body>
+
+</html>
