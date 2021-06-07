@@ -41,15 +41,15 @@ body {
 .dashboard {
     grid-area: dashboard;
     padding: 10px;
-    background-color: #555;
+    background-color: rgb(131, 162, 167);
     overflow: auto;
-    font-weight: 700;
+    font-weight: 800;
 }
 
 #map {
     position: relative;
     height: 100%;
-    margin: auto;
+    margin: 6%;
 }
 
 .content {
@@ -171,6 +171,6 @@ body {
 .leaflet-container {
     position: relative;
     outline: none;
-    width: 70%;
+    width: 90%;
     background-color: rgb(17, 22, 22);
 }

@@ -207,7 +207,7 @@ function createInfoPanel(){
 		// if feature is not highlighted
 		else
 		{
-			this._div.innerHTML = 'Hover over a country';
+			this._div.innerHTML = 'Hover over a country to get started!';
 		}
 	};
 
