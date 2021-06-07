@@ -21,12 +21,25 @@ body, html {
   
 body {
     display: grid;
-    grid-template-rows: 80px 70px 1fr 100px;
-    grid-template-columns: 15% 45% 40%;
-    grid-template-areas: "header header header" "sidebar title dashboard" "sidebar content dashboard" "text text text";
+    grid-template-rows: 80px 70px 1fr;
+    grid-template-columns: 20% 40% 40%;
+    grid-template-areas: "header header header" "sidebar title dashboard" "sidebar content dashboard";
     background-color: rgb(17, 22, 22);
 }
 
+p {
+    display: block;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    padding: 10px;
+    background-color: darkslategray;
+}
 
 .title {
     grid-area: title;
@@ -37,6 +50,7 @@ body {
 .text {
     grid-area: text;
     text-align: center;
+    margin-top: 1px;
 }
 
 .sidebar {
@@ -45,6 +59,9 @@ body {
     background-color: #555;
     overflow: auto;
     font-weight: 700;
+    word-wrap: break-word;
+    margin-right: 1%;
+    width: 100%
 }
 
 .dashboard {
@@ -53,12 +70,13 @@ body {
     background-color: rgb(131, 162, 167);
     overflow: auto;
     font-weight: 800;
+    word-wrap: break-word;
 }
 
 #map {
     position: relative;
-    height: 100%;
-    margin: 6%;
+    height:100%;
+    margin-left: 6%;
 }
 
 .content {
@@ -71,7 +89,7 @@ body {
 	padding: 6px 8px;
 	font: 14px/16px Arial, Helvetica, sans-serif;
 	background: white;
-	background: rgba(255,255,255,0.8);
+	background: rgba(255,255,255,0.5);
 	box-shadow: 0 0 15px rgba(0,0,0,0.2);
 	border-radius: 5px;
 	min-width: 250px;
