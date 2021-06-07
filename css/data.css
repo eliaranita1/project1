@@ -112,6 +112,7 @@ body, html {
   
   .content {
     grid-area: content;
+    margin: 10%;
   }
   
   a {
