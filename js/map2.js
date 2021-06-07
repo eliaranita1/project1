@@ -11,6 +11,9 @@ let geojson_data;
 let geojson_layer;
 let zoomdata = [];
 let values = [];
+let datafortable = [
+];
+let data2;
 
 let brew = new classyBrew();
 let legend = L.control({ position: 'bottomright' });
@@ -26,6 +29,20 @@ $(document).ready(function () {
     getGeoJSON();
     //readCSV(path);
 });
+
+window.addEventListener('load', function () {
+    elements = document.getElementsByClassName('jsgrid-header-cell jsgrid-header-sortable');
+    console.log(elements);
+    elements[0].innerHTML = "Country";
+    elements[1].innerHTML = "Waste per person rank";
+    elements[2].innerHTML = "GDP (Millions)";
+    elements[3].innerHTML = "Plastic waste 2010 (Metric Tons)";
+    elements[4].innerHTML = "Plastic waste rank";
+})
+elements = document.getElementsByClassName('jsgrid-header-cell jsgrid-header-sortable');
+console.log(elements);
+//theButton = elements[3]; // or whatever you need to do to get the one you want and ignore the other one
+//elements.innerHTML = "Country"; // This should both add the new class and overwrite the old one
 
 // create the map
 function createMap(lat, lon, zl) {
@@ -226,7 +243,7 @@ function createDashboard(properties) {
     ]
 
     // data fields
-    let fields = [['GDP Estimate' , '2010'], ['Total Mismanaged',  'Plastic Waste']]
+    let fields = [['GDP Estimate', '2010 (Millions)'], ['Total Mismanaged', 'Plastic Waste', '(Metric Tons)']]
 
     // chart options
     var options = {
@@ -318,8 +335,6 @@ function createDashboard(properties) {
 
 function createTable() {
 
-    let datafortable = [
-    ];
 
     geojson_data.features.forEach(function (item) {
         datafortable.push(item.properties)
@@ -333,7 +348,7 @@ function createTable() {
         { name: 'gdp_md_est', type: 'number' },
         { name: fieldtomap, type: 'number' },
         { name: 'plastic_rank', type: 'number' },
-        
+
     ]
 
     $(".sidebar").jsGrid({
@@ -351,16 +366,21 @@ function createTable() {
         data: datafortable,
         fields: fields,
         rowClick: function (datafortable) {
-
+            console.log("x");
+            console.log(datafortable)
+            data2 = datafortable;
+            console.log(data2);
             zoomTo(datafortable.item.waste_per_person_rank)
         },
     });
 }
 
 function zoomTo(e) {
-console.log(e);
-
-console.log(geojson_layer._layers)
-map.fitBounds(geojson_layer.getLayers()[e-1].getBounds());
+    console.log(e);
+    console.log(geojson_layer)
+    console.log(geojson_layer._layers)
+    console.log(data2);
+    map.fitBounds(geojson_layer.getLayers()[e - 1].getBounds());
+    createDashboard(data2.item);
 
 }
