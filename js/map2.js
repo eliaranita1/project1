@@ -229,13 +229,14 @@ function zoomToFeature(e) {
 function createDashboard(properties) {
 
     // clear dashboard
-    $('.dashboard').empty();
+    $('.chart').empty();
 
     //console.log(properties)
 
     // chart title
     let title = [['Gross Domestic Product (GDP)'], ['& Mismanaged Plastic Waste'], ['in ' + properties['country']]];
-
+document.getElementById('pol').innerHTML= properties['plastic_rank'];
+document.getElementById('gdp').innerHTML= properties['gdp_rank'];
     // data values
     let data = [
         properties['gdp_md_est'],
@@ -329,7 +330,7 @@ function createDashboard(properties) {
         }
     };
 
-    var chart = new ApexCharts(document.querySelector('.dashboard'), options)
+    var chart = new ApexCharts(document.querySelector('.chart'), options)
     chart.render()
 
 }
