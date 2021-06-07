@@ -76,7 +76,6 @@
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
     </script> -->
-<<<<<<< HEAD
     <h1 style="text-align: center; font-size: 80px;  font-family: 'Montserrat', sans-serif;
     font-weight: 800; letter-spacing: -2px; margin-top: 0px; margin-bottom: 10px; color: rgb(0, 38, 88);">
     Our Data</h1> <br>
@@ -88,100 +87,13 @@
     <div class='tableauPlaceholder' id='viz1623087353800' style='position: relative'><noscript><a href='#'><img alt='Dashboard 3 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DH&#47;DH151GDPPlasticScatter&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='DH151GDPPlasticScatter&#47;Dashboard3' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DH&#47;DH151GDPPlasticScatter&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1623087353800');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='650px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='887px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
 <p  style= "font-size: 20px;  text-align: left; font-family: 'Source Sans Pro', sans-serif; font-weight: 200; text-indent: 100px;"> <br> This Tableau Viz shows the relationship between GDP and mismanaged plastic waste in a scatter plot form. It is important to note the outlier in this plot: China. China had the greatest GDP and the most mismanaged plastic waste in 2010. While a first time viewer might jump to categorize China as the world’s worst polluter, we need to properly analyze why China accounts for much of the world's mismanaged plastic waste. The answer is our interconnected global trade system! In 2010, China was accepting plastic waste from other countries with the plan to recycle them, however over time they got inundated with so many plastic exports from other countries that they could no longer maintain this system. So they banned plastic waste imports from other countries in 2018. So when you are looking at countries on this map with HIGH GDPs and LOW mismanaged plastic waste, it is imperative you consider whether they were exporting plastic waste to China. Take a look at this chart, to see the countries which exported the most to China between 1998 and 2016. <br> 
 </p>
-=======
-    <p>The data we used to make our map room and conduct our analysis was not simply pulled from the internet, but
-      rather a combination of data sets so we could analyze plastic pollution in relation to Gross Domestic Product
-      (GDP) and population by country. The foundational data set was naturalearth_lowres which was a data frame from the
-      available data sets in the geopandas library. This data set had the geometry of each country along with a
-      population estimate and a GDP estimate from 2010. What we now needed was the plastic pollution data by country. We
-      found our Mismanaged Plastic Waste data set by country from 2010 on Our World in Data dot org. Then in python we
-      combined both of these tables and calculated countries rank by gdp and plastic pollution per person. Which are
-      represented visually on our choropleth map and bar charts.</p>
-    <div class='tableauPlaceholder' id='viz1623086902047' style='position: relative'><noscript><a href='#'><img
-            alt='Map Dashboard '
-            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YW&#47;YWF3B37DK&#47;1_rss.png'
-            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='path' value='shared&#47;YWF3B37DK' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image'
-          value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;YW&#47;YWF3B37DK&#47;1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object></div>
-    <script
-      type='text/javascript'>                    var divElement = document.getElementById('viz1623086902047'); var vizElement = divElement.getElementsByTagName('object')[0]; if (divElement.offsetWidth > 800) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '950px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else if (divElement.offsetWidth > 500) { vizElement.style.minWidth = '420px'; vizElement.style.maxWidth = '950px'; vizElement.style.width = '100%'; vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px'; vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px'; } else { vizElement.style.width = '100%'; vizElement.style.height = '977px'; } var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-    <p>This Tableau Viz shows the exact same data as our map just shown in a different format. Here you can investigate
-      the relationship between GDP and mismanaged plastic waste by country.
-    </p>
-    <div class='tableauPlaceholder' id='viz1623087353800' style='position: relative'><noscript><a href='#'><img
-            alt='Dashboard 3 '
-            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DH&#47;DH151GDPPlasticScatter&#47;Dashboard3&#47;1_rss.png'
-            style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='DH151GDPPlasticScatter&#47;Dashboard3' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image'
-          value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;DH&#47;DH151GDPPlasticScatter&#47;Dashboard3&#47;1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-      </object></div>
-    <script type='text/javascript'>
-      var divElement = document.getElementById('viz1623087353800');
-      var vizElement = divElement.getElementsByTagName('object')[0];
-      if (divElement.offsetWidth > 800) {
-        vizElement.style.minWidth = '420px';
-        vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%';
-        vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      } else if (divElement.offsetWidth > 500) {
-        vizElement.style.minWidth = '420px';
-        vizElement.style.maxWidth = '650px'; vizElement.style.width = '100%';
-        vizElement.style.minHeight = '587px'; vizElement.style.maxHeight = '887px';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-      }
-      else { vizElement.style.width = '100%'; vizElement.style.height = '727px'; }
-      var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
-    <p>This Tableau Viz shows the relationship between GDP and mismanaged plastic waste in a scatter plot form. It is
-      important to note the outlier in this plot: China. China had the greatest GDP and the most mismanaged plastic
-      waste in 2010. While a first time viewer might jump to categorize China as the world’s worst polluter, we need to
-      properly analyze why China accounts for much of the world's mismanaged plastic waste. The answer is our
-      interconnected global trade system! In 2010, China was accepting plastic waste from other countries with the plan
-      to recycle them, however over time they got inundated with so many plastic exports from other countries that they
-      could no longer maintain this system. So they banned plastic waste imports from other countries in 2018. So when
-      you are looking at countries on this map with HIGH GDPs and LOW mismanaged plastic waste, it is imperative you
-      consider whether they were exporting plastic waste to China. Take a look at this chart, to see the countries which
-      exported the most to China between 1998 and 2016.
-    </p>
->>>>>>> 0ecbf23ec8382ce1a5a659b4cf52f58f6960d5ec
 
     <img src="../photos/unnamed (1).png">
 
-<<<<<<< HEAD
           <p  style=" text-indent:100px;font-size: 20px;  text-align: left; font-family: 'Source Sans Pro', sans-serif; font-weight: 200; text-indent: 100px;">
             Now looking at this chart in relation to the scatter plot, you can see the cluster of countries with high GDP’s and low mismanaged plastic  waste are ALSO the top exporters to China. This contributes to the  astronomically high mismanaged plastic waste number we see from China. If you are interested in investigating these plastic trading relationships further, please refer to another team’s project at this link: <br><br> <a href="https://hoz-map.github.io/Rethink-Recycling/Midterm/index.html">https://hoz-map.github.io/Rethink-Recycling/Midterm/index.html</a>. 
             <br><br><br>
           </p>
-=======
-    <p>Now looking at this chart in relation to the scatter plot, you can see the cluster of countries with high GDP’s
-      and low mismanaged plastic waste are ALSO the top exporters to China. This contributes to the astronomically high
-      mismanaged plastic waste number we see from China. If you are interested in investigating these plastic trading
-      relationships further, please refer to another team’s project at this link: <a
-        href="https://hoz-map.github.io/Rethink-Recycling/Midterm/index.html">https://hoz-map.github.io/Rethink-Recycling/Midterm/index.html</a>.
-    </p>
->>>>>>> 0ecbf23ec8382ce1a5a659b4cf52f58f6960d5ec
 
   </div>
 
