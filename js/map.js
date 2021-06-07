@@ -2,129 +2,214 @@
 let map;
 let lat = 0;
 let lon = 0;
-let zl = 2;
-let path = "../Data/important-vessels.csv";
-let ppath = "../Data/PlasticMarinePollution.csv";
-let redmarkers = L.featureGroup();
-let orangemarkers = L.featureGroup();
-let bluemarkers = L.featureGroup();
-let yellowmarkers = L.featureGroup();
-let greenmarkers = L.featureGroup();
-let violetmarkers = L.featureGroup();
-let plastic = L.markerClusterGroup({chunkedLoading: true, maxClusterRadius: 30});
+let zl = 5;
+let path = '';
+let markers = L.featureGroup();
+
+// put this in your global variables
+let geojsonPath = '../Data/final_data.json';
+let geojson_data;
+let geojson_layer;
+
+let brew = new classyBrew();
+let fieldtomap;
+
+let legend = L.control({position: 'bottomright'});
+
+let info_panel = L.control();
 
 
 // initialize
-$(document).ready(function () {
-    createMap(lat, lon, zl);
-    readCSV(path);
-    readCSV2(ppath);
+$( document ).ready(function() {
+    createMap(lat,lon,zl);
+    getGeoJSON();
+	//readCSV(path);
 });
 
 // create the map
-function createMap(lat, lon, zl) {
-    map = L.map('map', {
-        preferCanvas: true,
-        zoomDelta: .5
-    }).setView([lat, lon], zl);
+function createMap(lat,lon,zl){
+	map = L.map('map').setView([lat,lon], zl);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(map);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
 }
 
 // function to read csv data
-function readCSV(path) {
-    Papa.parse(path, {
-        header: true,
-        Worker: true,
-        download: true,
-        complete: function (data) {
-            console.log(data);
-            // map the data
-             mapCSV(data);
-        }
-    });
+// function readCSV(path){
+// 	Papa.parse(path, {
+// 		header: true,
+// 		download: true,
+// 		complete: function(csvdata) {
+// 			console.log(csvdata);
+			
+// 			// map the csvdata
+// 			mapCSV(csvdata);
+// 		}
+// 	});
+// }
+
+// function to get the geojson data
+function getGeoJSON(){
+
+	$.getJSON(geojsonPath,function(data){
+		console.log(data)
+
+		// put the data in a global variable
+		geojson_data = data;
+
+		// call the map function
+		mapGeoJSON('Total mismanaged plastic waste in 2010', 7, 'Reds') // add a field to be used
+	})
 }
 
-function readCSV2(ppath) {
-    Papa.parse(ppath, {
-        header: true,
-        Worker: true,
-        download: true,
-        complete: function (data) {
-            console.log(data);
-            // map the data
-            mapCSV2(data);
-        }
-    });
+// function to map a geojson file
+function mapGeoJSON(field, num_classes, color_scheme){
+
+	// clear layers in case it has been mapped already
+	if (geojson_layer){
+		geojson_layer.clearLayers()
+	}
+	
+	// globalize the field to map
+	fieldtomap = field;
+
+	// create an empty array
+	let values = [];
+
+	// based on the provided field, enter each value into the array
+	geojson_data.features.forEach(function(item,index){
+		values.push(item.properties[field]) // populate your array
+	})
+
+	// set up the "brew" options
+	brew.setSeries(values);
+	brew.setNumClasses(num_classes);
+	brew.setColorCode(color_scheme); // yellow orange red
+	brew.classify('quantiles'); // quantiles to create division
+
+	// create the geojson layer
+	geojson_layer = L.geoJson(geojson_data,{
+		style: getStyle,
+		onEachFeature: onEachFeature // actions on each feature
+	}).addTo(map);
+
+	map.fitBounds(geojson_layer.getBounds());
+    map.setZoom(1);
+
+    // create the legend
+	createLegend();
+
+    // create the infopanel
+	createInfoPanel();
 }
 
-
-function mapCSV2(data) {
-    // loop through each entry
-    data.data.forEach(function (item, index) {  
-        
-                let trash = L.circleMarker([item.Lat, item.Lon], { color: "black" });
-                // add marker to featuregroup
-                plastic.addLayer(trash);
-    })
-    let overlayMaps = {
-        " major plastic pollution": plastic,       
-    };
-    L.control.layers(null, overlayMaps).addTo(map);
+function getStyle(feature){
+	return {
+		stroke: true,
+		color: 'white',
+		weight: 1,
+		fill: true,
+		fillColor: brew.getColorInRange(feature.properties[fieldtomap]),
+		fillOpacity: 0.8
+	}
 }
 
-function mapCSV(data) {
-    // loop through each entry
-    data.data.forEach(function (item, index) {
-        // sort colors
-        switch (item.col) {
+// return the color for each feature
+function getColor(d) {
 
-            case 'red':
-                // create marker
-                let r = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                // add marker to featuregroup
-                redmarkers.addLayer(r);
-                break;
+	return d > 1000000000 ? '#800026' :
+		   d > 500000000  ? '#BD0026' :
+		   d > 200000000  ? '#E31A1C' :
+		   d > 100000000  ? '#FC4E2A' :
+		   d > 50000000   ? '#FD8D3C' :
+		   d > 20000000   ? '#FEB24C' :
+		   d > 10000000   ? '#FED976' :
+					  '#FFEDA0';
+}
 
-            case 'blue':
-                let b = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                bluemarkers.addLayer(b);
-                break;
+function createLegend(){
+	legend.onAdd = function (map) {
+		var div = L.DomUtil.create('div', 'info legend'),
+		breaks = brew.getBreaks(),
+		labels = [],
+		from, to;
+		
+		for (var i = 0; i < breaks.length; i++) {
+			from = breaks[i];
+			to = breaks[i + 1];
+			if(to) {
+				labels.push(
+					'<i style="background:' + brew.getColorInRange(to) + '"></i> ' +
+					from.toFixed(2) + ' &ndash; ' + to.toFixed(2));
+				}
+			}
+			
+			div.innerHTML = labels.join('<br>');
+			return div;
+		};
+		
+		legend.addTo(map);
+}
 
-            case 'green':
-                let g = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                greenmarkers.addLayer(g);
-                break;
+// Function that defines what will happen on user interactions with each feature
+function onEachFeature(feature, layer) {
+	layer.on({
+		mouseover: highlightFeature,
+		mouseout: resetHighlight,
+		click: zoomToFeature
+	});
+}
 
-            case 'yellow':
-                let y = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                yellowmarkers.addLayer(y);
-                break;
+// on mouse over, highlight the feature
+function highlightFeature(e) {
+	var layer = e.target;
 
-            case 'violet':
-                let v = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                violetmarkers.addLayer(v);
-                break;
+	// style to use on mouse over
+	layer.setStyle({
+		weight: 2,
+		color: '#666',
+		fillOpacity: 0.7
+	});
 
-            case 'orange':
-                let o = L.circleMarker([item.lat, item.lon], { color: item.col, radius: .25 });
-                orangemarkers.addLayer(o);
-                break;
-            default:
-                console.log("didnt work");
-        }
-    })
+	if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+		layer.bringToFront();
+	}
 
-    var overlayMaps = {
-        "Spain": redmarkers,
-        "Ecuador": orangemarkers,
-        "Japan": yellowmarkers,
-        "Norway (pots/traps)": greenmarkers,
-        "Falkland Islands": bluemarkers,
-        "Norway (nets)": violetmarkers
-    };
+    info_panel.update(layer.feature.properties)
+}
 
-    L.control.layers(null, overlayMaps).addTo(map);
+// on mouse out, reset the style, otherwise, it will remain highlighted
+function resetHighlight(e) {
+	geojson_layer.resetStyle(e.target);
+    info_panel.update() // resets infopanel
+}
+
+// on mouse click on a feature, zoom in to it
+function zoomToFeature(e) {
+	map.fitBounds(e.target.getBounds());
+}
+
+function createInfoPanel(){
+
+	info_panel.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+		this.update();
+		return this._div;
+	};
+
+	// method that we will use to update the control based on feature properties passed
+	info_panel.update = function (properties) {
+		// if feature is highlighted
+		if(properties){
+			this._div.innerHTML = `<b>${properties.name}</b><br>${fieldtomap} (Tonnes): ${properties[fieldtomap]}`;
+		}
+		// if feature is not highlighted
+		else
+		{
+			this._div.innerHTML = 'Hover over a country';
+		}
+	};
+
+	info_panel.addTo(map);
 }
