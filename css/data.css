@@ -4,20 +4,28 @@ body, html {
     width: 100%;
   }
   
-  /* Navbar container */
-    
-  .navbar {
-    overflow: hidden;
-    background-color: darkslategray;
-    font-family: Arial;
-  }
+/* Navbar container */
+  
+.navbar {
+  overflow: hidden;
+  background-color: rgb(10, 15, 15);
+  font-family: Arial;
+}
+
+.header {
+  grid-area: header;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(10, 15, 15);
+}
+
   
   /* Links inside the navbar */
   
   .navbar a {
     float: left;
     font-size: 25px;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     text-align: center;
     padding: 14px 16px;
@@ -37,7 +45,7 @@ body, html {
     font-size: 25px;
     border: none;
     outline: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: bold;
     padding: 14px 16px;
     background-color: inherit;
@@ -101,12 +109,6 @@ body, html {
     grid-template-areas: "header" "content";
   }
   
-  .header {
-    grid-area: header;
-    text-align: center;
-    padding: 10px;
-    background-color: darkslategray
-  }
   
   .content {
     grid-area: content;
