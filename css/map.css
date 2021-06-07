@@ -34,12 +34,6 @@ p {
     margin-inline-end: 0px;
 }
 
-.header {
-    grid-area: header;
-    text-align: center;
-    padding: 10px;
-    background-color: darkslategray;
-}
 
 .title {
     grid-area: title;
