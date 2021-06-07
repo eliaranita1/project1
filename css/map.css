@@ -46,6 +46,8 @@ body {
     background-color: rgb(131, 162, 167);
     overflow: auto;
     font-weight: 800;
+    word-wrap: break-word;
+    margin-left: -20px;
 }
 
 #map {

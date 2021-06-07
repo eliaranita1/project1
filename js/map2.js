@@ -217,7 +217,7 @@ function createDashboard(properties) {
     //console.log(properties)
 
     // chart title
-    let title = 'Gross Domestic Product (GDP) & Population in ' + properties['country'];
+    let title = [['Gross Domestic Product (GDP)'], ['& Mismanaged Plastic Waste'], ['in ' + properties['country']]];
 
     // data values
     let data = [
@@ -226,10 +226,7 @@ function createDashboard(properties) {
     ]
 
     // data fields
-    let fields = [
-        'GDP Estimate (2010)',
-        'Total Mismanaged Plastic Waste',
-    ]
+    let fields = [['GDP Estimate' , '2010'], ['Total Mismanaged',  'Plastic Waste']]
 
     // chart options
     var options = {
@@ -237,6 +234,7 @@ function createDashboard(properties) {
             type: 'bar',
             height: 300,
             width: '100%',
+            foreColor: 'black',
             animations: {
                 enabled: true,
                 easing: 'easeinout',
@@ -251,9 +249,22 @@ function createDashboard(properties) {
                 }
             }
         },
-        title: {
-            text: title
+
+        dataLabels: {
+            style: {
+                fontSize: '19px',
+                fontFamily: 'Helvetica, Arial, sans-serif',
+                fontWeight: 'bold',
+            },
+
+
         },
+
+        title: {
+            text: title,
+            align: 'center',
+        },
+
         plotOptions: {
             bar: {
                 horizontal: true
